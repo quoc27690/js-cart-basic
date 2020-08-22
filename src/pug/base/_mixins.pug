@@ -1,0 +1,94 @@
+mixin title-main(text)
+  .title-main
+    p= text
+    img(src='./assets/images/title.png')
+
+mixin title-product(text)
+  .title-product
+    p= text
+    img(src='./assets/images/arrow.png')
+
+mixin price-product(num)
+  .price-product
+    p= num
+      sup đ
+
+mixin button-more(text)
+  .button-more
+    button= text
+
+mixin button-add-to-cart
+  .button-add-to-cart
+    button ADD TO CART
+
+mixin time-box(num, text)
+  .time-box
+    p= num
+    p= text
+
+mixin corner-big(text)
+  .corner-big
+    .corner
+      p= text
+    .underline
+
+mixin corner-small(text)
+  .corner-small(style!=attributes.style)
+    .corner
+      p= text
+    .underline
+
+mixin product(link, title, price, old, text)
+  .product
+    .product__image
+      img(src=link)
+    .product__title
+      p= title
+    .product__price
+      p= price
+        sup đ
+      p -
+      p= old
+        sup đ
+    +button-add-to-cart
+    if text !== ''
+      +corner-small(text)(style!=attributes.style)
+    .product__compare
+      a(href='#')
+        i.fa.fa-heart
+        p Yêu thích
+      a(href='#')
+        i.fa.fa-signal
+        p So sánh
+      a(href='#')
+        i.fa.fa-compress
+    
+mixin index-images-item(link)
+  .index__images__item
+    img(src=link)
+    .index__item__hover
+      p 1987
+      p RƯỢU
+      a(href='#')
+
+mixin blog-item(link, text1, text2, text3)
+  .blog__item
+    .blog__item__image
+      img(src=link)
+      .blog__image__hover
+        .blog__hover__bg
+        .blog__hover__icon
+            i.fa.fa-link
+        a(href='#')
+    .blog__item__title
+      a(href='#')= text1
+    .blog__item__time
+      p= text2
+    .blog__item__content
+      p= text3
+    .blog__item__read-more
+      a(href='#') Read more
+
+mixin detail-text-title(text)
+  .detail-text-title
+    p= text

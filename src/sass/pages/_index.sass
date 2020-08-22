@@ -1,0 +1,337 @@
+@import ../base/_mixins
+@import ../base/_variables
+@import ../base/_placeholders
+
+.index
+  background: url("../assets/images/index-bg-left.png") left top no-repeat, url("../assets/images/index-bg-right.png") right top no-repeat
+  background-size: 25%, 10%
+
+  &__intro
+    @include pt-pb(100px, 0)
+    
+    .wrapper
+      @include grid(12, 30px)
+      
+      .index__intro__container
+        grid-column: 2/12
+        text-align: center
+          
+        .index__intro__content
+          @include mt-mb(25px, 0)
+
+          p 
+            color: $color-primary
+            font-size: $font-size-intro-content
+        
+        .index__intro__more
+          @include mt-mb(35px, 0)
+
+  &__sale
+    @include mt-mb(104px, 0)
+
+    .wrapper
+      .index__sale__container
+        position: relative
+
+        & > img 
+          width: 100%
+
+        .index__sale__product
+          position: absolute
+          top: 345px
+          left: 0
+          right: 0
+          @include grid(12, 30px)
+
+          .index__sale__product--wrapper
+            grid-column: 2/12
+            @include grid(10, 30px)
+            @include pt-pb(95px, 0)
+            background-color: $color-white
+
+            .index__sale__item
+              position: relative
+              overflow: hidden
+              grid-column: 2/7
+              text-align: center
+
+            .index__sale__detail
+              grid-column: 7/10
+              
+              .index__detail__price
+                @include mt-mb(15px, 0)
+
+              .index__detail__button
+                @include mt-mb(38px, 0)
+
+              .index__detail__content
+                @include mt-mb(25px, 0)
+
+                p
+                  font-size: $font-size-sale-content
+
+              .index__detail__time
+                @include grid(2, 0)
+                @include mt-mb(55px, 0)
+
+  &__new-products
+    @include mt-mb(970px, 0)
+    @include md
+      @include mt-mb(750px, 0)
+    @include lg
+      @include mt-mb(580px, 0)
+    @include xl
+      @include mt-mb(395px, 0)
+
+    .wrapper
+      .index__new-products__container
+        text-align: center
+
+        .index__new-products__slide
+          position: relative
+          @include mt-mb(45px, 0)
+
+          input
+            position: absolute
+            visibility: hidden
+          
+          .index__slide__full-images--hidden
+            overflow: hidden
+
+            .index__slide__full-images
+              display: flex
+              width: 200%
+              transform: translateX(0%)
+              @include transition
+              
+          #index-new-products-1:checked ~ .index__slide__full-images--hidden .index__slide__full-images
+            transform: translateX(0%)
+          #index-new-products-2:checked ~ .index__slide__full-images--hidden .index__slide__full-images
+            transform: translateX(-50%)
+          
+          .index__slide__arrow
+
+            &--left
+              position: absolute
+              top: 50%
+              left: -15px
+
+            &--right
+              position: absolute
+              top: 50%
+              right: -15px
+            
+            &--left, &--right
+              i
+                color: $color-hover
+                font-size: $font-size-slide-arrow
+                cursor: pointer
+
+  &__images
+    @include grid(4, 0)
+    @include mt-mb(100px, 0)
+    
+    &__item
+      position: relative
+      overflow: hidden
+
+      &:hover
+        img
+          transform: scale(1.1)
+          opacity: 0.8
+
+        .index__item__hover
+          p 
+            @include xl
+              visibility: visible
+              opacity: 1
+
+            &:last-of-type
+              &::before
+                opacity: 1
+                transform: scale(1)
+              &::after
+                opacity: 1
+                transform: scale(1)
+
+      img
+        width: 100%
+        transform: scale(1)
+        @include transition
+
+      .index__item__hover
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100% 
+        text-align: center
+
+        p 
+          visibility: hidden
+          opacity: 0
+          color: $color-white
+          letter-spacing: 7px
+          @include transition
+
+          &:first-of-type
+            @include mt-mb(60px, 0)
+            font-size: $font-size-primary
+
+          &:last-of-type
+            @include mt-mb(30px, 0)
+            font-size: $font-size-index-images
+
+            &::before
+              top: 35%
+              right: 10%
+              bottom: 25%
+              left: 10%
+              border-top: 1px solid $color-white
+              border-bottom: 1px solid $color-white
+              transform: scale(0,1)
+              @extend %index-images-before-after
+
+            &::after
+              top: 27%
+              right: 15%
+              bottom: 17%
+              left: 15%
+              border-left: 1px solid $color-white
+              border-right: 1px solid $color-white
+              transform: scale(1,0)
+              @extend %index-images-before-after
+
+        a 
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          height: 100%
+
+          &:hover
+            border: 4px solid $color-hover
+
+  &__selling-products
+    @include mt-mb(100px, 0)
+
+    .wrapper
+      .index__selling-products__container
+        text-align: center
+
+        .index__selling-products__slide
+          position: relative
+          @include mt-mb(45px, 0)
+
+          input
+            position: absolute
+            visibility: hidden
+
+          .index__slide__full-images--hidden
+            overflow: hidden
+
+            .index__slide__full-images
+              display: flex
+              width: 200%
+              transform: translateX(0%)
+              @include transition
+              
+          #index-selling-products-1:checked ~ .index__slide__full-images--hidden .index__slide__full-images
+            transform: translateX(0%)
+          #index-selling-products-2:checked ~ .index__slide__full-images--hidden .index__slide__full-images
+            transform: translateX(-50%)
+          
+          .index__slide__arrow
+
+            &--left
+              position: absolute
+              top: 50%
+              left: -15px
+
+            &--right
+              position: absolute
+              top: 50%
+              right: -15px
+            
+            &--left, &--right
+              i
+                color: $color-hover
+                font-size: $font-size-slide-arrow
+                cursor: pointer
+         
+  &__blog-customer
+    @include mt-mb(100px, 100px)
+
+    .wrapper
+      .index__blog-customer__container
+        @include grid(12, 30px)
+
+        .index__blog
+          grid-column: 1/13
+          @include xl 
+            grid-column: 1/9
+        
+          &__title
+            text-align: center
+          
+          &__item
+            @include grid(12, 30px)
+            @include mt-mb(45px, 0)
+
+            .blog__item
+              &:first-child
+                grid-column: 1/7
+
+              &:last-child
+                grid-column: 7/13
+              
+        .index__customer
+          grid-column: 1/13
+          text-align: center
+          @include xl 
+            grid-column: 9/13  
+
+          &__content
+            & > img
+              @include mt-mb(45px, 0)
+            
+            .index__content__comment
+              @include mt-mb(30px, 0)
+
+              p, a
+                color: $color-primary
+                font-size: $font-size-index-customer
+              a
+                opacity: 0.5
+                @include transition
+                  
+            .index__content__avatar
+              @include mt-mb(30px, 0)
+
+              p
+                color: $color-primary
+
+                &:first-of-type
+                  @include mt-mb(22px, 0)
+                  font-size: $font-size-index-customer
+                  
+                &:last-of-type
+                  opacity: 0.5
+                  font-size: $font-size-primary
+                  
+            .index__content__dots
+              display: flex
+              justify-content: center
+              @include mt-mb(40px, 0)
+              
+              span
+                width: 6px
+                height: 6px
+                border-radius: 50%
+                @include ml-mr(0, 7px)
+                background-color: $color-primary
+                cursor: pointer
+                @include transition
+                
+                &:hover
+                  background-color: $color-hover

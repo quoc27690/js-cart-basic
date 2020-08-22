@@ -1,0 +1,301 @@
+@import ../base/_mixins
+@import ../base/_variables
+
+header
+  .header__top-menu
+    .header__top-menu--relative, .header__top-menu--absolute
+      z-index: $z-index-header-top-menu
+      
+      .wrapper
+        display: flex
+        justify-content: space-between
+
+        .header__top-menu__left
+          display: flex
+          align-items: center
+
+          ul
+            display: none
+            @include lg
+              display: block
+
+            li
+              &:not(:last-child)::after
+                @include pl-pr(12px, 12px)
+                content: "-"
+              
+              a 
+                @include transition
+                
+                &:hover
+                  text-decoration: underline 
+
+          &:hover ul
+            @include lg-max
+              position: absolute
+              display: block
+              top: 100%
+              left: 0
+              width: 100%
+              text-align: center
+              box-shadow: 0px 8px 8px rgba(0,0,0,0.2)
+              
+              li
+                float: none
+                @include pt-pb(5px, 5px)
+                
+                &:not(:last-child)::after
+                  content: none
+
+          i 
+            cursor: pointer
+            @include transition
+            @include lg
+              display: none
+
+        .header__top-menu__right
+          input, button
+            background-color: transparent
+
+          input
+            width: 230px
+            @include pl-pr(10px, 10px)
+            border: none
+            border-left: 1px solid $color-white
+            background-color: transparent
+            color: $color-primary
+            font-style: italic
+
+        i
+          @include pt-pb(10px, 10px)
+          font-size: $font-size-header-top-menu
+          @include transition
+
+    .header__top-menu--relative
+      position: relative
+
+      .header__top-menu__left
+        &:hover ul
+          @include lg-max
+            background-color: $color-white
+        
+        ul li a 
+          color: $color-black
+
+      i 
+        color: $color-black
+
+    .header__top-menu--absolute
+      position: absolute
+      left: 0
+      right: 0
+      background-color: $color-transparent
+
+      .header__top-menu__left
+        &:hover ul
+          @include lg-max
+            background-color: $color-transparent
+        
+        ul li a 
+          color: $color-primary
+
+      i 
+        color: $color-primary
+
+  .header__slide
+    position: relative
+    overflow: hidden
+
+    input
+      position: absolute
+      visibility: hidden
+    
+    &__full-images
+      display: flex
+      transform: translateX(0%)
+      @include transition
+
+      img
+        min-width: 100%
+        height: 332px
+
+        @include md
+          height: 664px
+        
+
+    #header-slide-1:checked ~ .header__slide__full-images
+      transform: translateX(0%)
+    #header-slide-2:checked ~ .header__slide__full-images
+      transform: translateX(-100%)
+    #header-slide-3:checked ~ .header__slide__full-images
+      transform: translateX(-200%)
+
+    &__text
+      position: absolute
+      top: 90px
+      left: 0
+      right: 0
+
+      .wrapper
+        img 
+          width: 60%
+          @include md
+            width: 75%
+
+    &__rectangle
+      position: absolute
+      left: 0
+      right: 0
+      bottom: 34px
+      display: flex
+      justify-content: center
+
+      label
+        width: 36px
+        height: 5px
+        @include ml-mr(0, 7px)
+        border: 1px solid $color-white
+        background-color: none
+        cursor: pointer
+        @include transition
+
+        &:hover
+          background-color: $color-hover
+
+  .header__main-menu
+    position: relative
+    background-color: $color-black
+
+    .wrapper
+      display: flex
+      justify-content: space-between
+
+      .header__main-menu__logo
+        img
+          @include pt-pb(18px, 14px)
+          width: 50%
+
+          @include xl
+            width: 100%          
+
+      .header__main-menu__list 
+        position: static
+        @include xl 
+          position: relative
+        display: flex
+        align-items: center
+
+        .header__list__icon
+          color: $color-white
+          font-size: $font-size-header-main-menu-list-icon
+          cursor: pointer
+          @include xl
+            display: none
+
+        .header__list__menu
+          display: none
+          @include xl
+            display: block
+
+          & > li
+            @include pl-pr(0, 40px)
+
+            &:last-child
+             @include pl-pr(0, 0)
+
+            &:nth-child(2)
+              .header__list__sub
+                position: absolute
+                top: 30%
+                left: 0
+                right: 0
+                @include xl
+                  top: 100%
+                  left: auto
+                  right: 0
+                visibility: hidden
+                display: flex
+                justify-content: center
+                @include pl-pr(31px, 31px)
+                @include pt-pb(38px, 38px)
+                background-color: $color-white
+                border: 1px solid $color-hover
+                box-shadow: 0px 8px 18px rgba(0,0,0,0.2)
+                opacity: 0
+                @include transition    
+
+                .header__sub__title
+                  @include ml-mr(0, 47px)
+
+                  &:nth-child(2), &:nth-child(3)
+                    display: none
+                    @include sm 
+                      display: block
+                    
+                  &:nth-child(3)
+                    @include ml-mr(0, 0px)
+                    @include xl
+                      @include ml-mr(0, 25px)
+                    
+                  p
+                    @include mt-mb(0, 13px)
+                    color: $color-black
+                    font-size: $font-size-header-main-menu-sub
+                    text-transform: uppercase
+                  
+                  .header__sub__item
+                    li
+                      float: none
+                      @include mt-mb(0, 13px)
+
+                      &:last-child
+                        @include mt-mb(0, 0px)
+                      
+                      a
+                        font-size: $font-size-header-main-menu-sub
+                        color: $color-primary
+                        text-transform: none
+                        white-space: nowrap
+                        @include transition
+
+                .header__sub__image
+                  display: none
+                  @include xl 
+                    display: block
+                  
+                .header__sub__triangle
+                  position: absolute
+                  bottom: 100%
+                  left: 50%
+                  @include xl 
+                    left: 24%
+                  border-left: 8px solid transparent
+                  border-right: 8px solid transparent
+                  border-bottom: 8px solid $color-hover
+
+              &:hover .header__list__sub
+                visibility: visible
+                opacity: 1
+                
+            .header__list__item
+              color: $color-white
+              font-size: $font-size-header-main-menu-list-item
+              text-transform: uppercase
+              letter-spacing: 3px
+              @include transition
+
+        &:hover .header__list__menu
+          @include xl-max
+            position: absolute
+            display: block
+            top: 100%
+            left: 0
+            width: 100%
+            background-color: $color-black
+            box-shadow: 0px 8px 8px rgba(0,0,0,0.2)
+            
+            li
+              float: none
+              @include pt-pb(5px, 5px)
+              @include pl-pr(0, 0)
+              text-align: center

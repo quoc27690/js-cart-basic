@@ -1,0 +1,167 @@
+@import ../base/_mixins
+@import ../base/_variables
+
+footer
+  .footer__top
+    img
+      display: none
+      @include sm
+        display: block
+        width: 80%
+      @include xl
+        width: auto
+      @include ml-mr(auto, auto)
+      @include mt-mb(0, 55px)
+      
+  .footer__middle
+    .wrapper
+      @include grid(12, 30px)
+
+      ul
+        li
+          float: none
+          @include mt-mb(0, 7px)
+
+          &:last-child
+            @include mt-mb(0, 0)
+          
+          a 
+            color: $color-primary
+            font-size: $font-size-primary
+            text-transform: uppercase
+      
+      p 
+        @include mt-mb(0, 15px)
+        font-size: $font-size-footer-title
+        text-transform: uppercase
+
+      .footer__middle__info
+        grid-column: 1/13  
+        @include sm
+          grid-column: 1/7       
+        @include lg
+          grid-column: 1/3
+      
+      .footer__middle__buy
+        grid-column: 1/13  
+        @include sm
+          grid-column: 8/13
+        @include lg
+          grid-column: 3/5
+
+      .footer__middle__email
+        grid-column: 1/13  
+        @include sm
+          grid-column: 1/7 
+        @include lg
+          grid-column: 5/9
+
+        p 
+          &:last-of-type
+            @include mt-mb(0, 15px)
+            color: $color-primary
+            font-size: $font-size-footer-email
+            text-transform: none
+        
+        form
+          display: flex
+
+          input
+            width: 68%
+            @include pl-pr(15px, 15px)
+            color: $color-primary
+            font-family: inherit
+            font-size: inherit
+            font-style: italic
+            outline: none
+                
+          .footer__email__submit
+            display: flex
+
+            &:hover
+              .footer__email__submit--button
+                background-color: $color-hover
+
+              .footer__email__submit--triangle
+                border-left-color: $color-hover
+              
+            &--button
+              @include pl-pr(18px, 15px)
+              background-color: $color-black
+              color: $color-white
+              font-family: inherit
+              font-size: inherit
+                
+            &--triangle
+              border-top: 14px solid transparent
+              border-left: 18px solid $color-black
+              border-bottom: 14px solid transparent
+              cursor: pointer
+              @include transition
+
+        .footer__email__social
+          ul 
+            li 
+              float: left
+              @include pl-pr(0, 10px)
+              @include mt-mb(22px, 0)
+              
+      .footer__middle__contact
+        grid-column: 1/13  
+        @include sm
+          grid-column: 8/13
+        @include lg
+          grid-column: 9/12
+      
+        ul 
+          li 
+            float: left
+            display: flex
+            align-items: flex-start
+            @include mt-mb(0, 15px)
+
+            i 
+              @include ml-mr(0, 5px)
+              
+            a
+              font-size: $font-size-footer-contact
+              text-transform: none
+
+            &:nth-child(2)
+              a
+                &::after
+                  content: '-'
+                  @include pl-pr(5px, 5px)
+                  
+            &:nth-child(4)
+              a
+                &::after
+                  content: ''
+                  @include pl-pr(7px, 7px)              
+              
+  hr 
+    @include mt-mb(15px, 10px)
+       
+  .footer__bottom
+    .wrapper
+      @include grid(12, 30px)
+      
+      .footer__bottom__left
+        grid-column: 1/13
+        @include md
+          grid-column: 1/9
+        display: flex
+        align-items: center
+
+        p
+          font-family: 'Roboto'
+
+      .footer__bottom__right
+        grid-column: 1/13
+        @include md
+          grid-column: 9/12
+
+        img 
+          @include mt-mb(0, 15px)
+          
+        

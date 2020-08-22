@@ -1,0 +1,25 @@
+.header__main-menu
+  .wrapper
+    .header__main-menu__logo
+      img(src='./assets/images/header-main-menu-logo.png')
+    .header__main-menu__list
+      i.fa.fa-bars.header__list__icon
+      ul.header__list__menu
+        each item in headerMainMenuListMenu
+          if item.name == 'Rượu vang đỏ'
+            li 
+              a.header__list__item(href=item.link)= item.name
+              .header__list__sub
+                each valTitle in headerMainMenuListMenuSubTitle
+                  .header__sub__title
+                    p= valTitle
+                    ul.header__sub__item
+                      each valItem in headerMainMenuListMenuSubItem
+                        li
+                          a(href='#')= valItem
+                .header__sub__image
+                  img(src='./assets/images/header-main-menu-sub.png')
+                .header__sub__triangle
+          else
+            li 
+              a.header__list__item(href=item.link)= item.name

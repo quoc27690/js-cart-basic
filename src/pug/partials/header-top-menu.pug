@@ -1,0 +1,12 @@
+.wrapper
+  .header__top-menu__left
+    i.fa.fa-bars
+    ul
+      each item in headerTopMenu
+        li
+          a(href=item.link)= item.name
+  .header__top-menu__right
+      form
+        input(placeholder="Tìm kiếm ở đây ...")
+        button
+          i.fa.fa-search

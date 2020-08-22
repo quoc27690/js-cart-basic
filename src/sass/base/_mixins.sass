@@ -1,0 +1,51 @@
+@import ./_variables
+
+@mixin font-face($name)
+  @font-face 
+    font-family: $name
+    src: url('../assets/fonts/#{$name}.ttf')
+  
+@mixin xs {@media (min-width: 0px)    
+  @content}
+
+@mixin sm {@media (min-width: $sm)    
+  @content}
+
+@mixin md {@media (min-width: $md)    
+  @content}
+
+@mixin lg {@media (min-width: $lg)    
+  @content}
+
+@mixin lg-max {@media (max-width: $lg)    
+  @content}
+
+@mixin xl {@media (min-width: $xl)
+  @content}
+
+@mixin xl-max {@media (max-width: $xl)    
+  @content}
+
+@mixin grid($col, $gap)
+  display: grid
+  grid-template-columns: repeat($col, 1fr)
+  grid-gap: $gap
+
+@mixin pl-pr($pl, $pr)
+  padding-left: $pl
+  padding-right: $pr
+
+@mixin pt-pb($pt, $pb)
+  padding-top: $pt
+  padding-bottom: $pb
+
+@mixin ml-mr($ml, $mr)
+  margin-left: $ml
+  margin-right: $mr
+
+@mixin mt-mb($mt, $mb)
+  margin-top: $mt
+  margin-bottom: $mb
+
+@mixin transition
+  transition: all .3s ease

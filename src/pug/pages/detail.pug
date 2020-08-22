@@ -1,0 +1,130 @@
+extends ../layouts/default-layout
+
+block title
+  title Rượu Vang Đỏ
+
+block container
+  .detail
+    .detail__link
+      .wrapper
+        ul
+          each item in detailLink
+            li
+              a(href=item.link)= item.name
+    .detail__main
+      .wrapper
+        .detail__main__container
+          .detail__main__left-middle
+            .detail__main__left
+              - var n = 1;
+              while n < 3
+                input(id=`detail-slide-${n++}` type='radio' name='detail-slide')
+              .detail__slide__full-images--hidden
+                .detail__slide__full-images
+                  each item in detailMainLeft
+                    .detail__slide__image
+                      img(src=item)
+              .detail__slide__arrow
+                .detail__slide__arrow--up
+                  label(for="detail-slide-1")
+                    i.fa.fa-arrow-up
+                .detail__slide__arrow--down
+                  label(for="detail-slide-2")
+                    i.fa.fa-arrow-down
+            .detail__main__middle
+              img(src='./assets/images/detail-main-middle.png')
+          .detail__main__right
+            .detail__right__title
+              +title-product('RƯỢU NHO NĂM 1987')
+            .detail__right__price
+              +price-product('330.000')
+            .detail__right__review
+              ul
+                each item in detailMainRightReview
+                  li
+                    i(class=item) 
+              p 1 Review(S) | Add Your Review
+            .detail__right__color
+              +detail-text-title('MÀU SẮC')
+              each item in detailMainRightColor
+                button(style=`background-color: ${item}`)
+            .detail__right__size
+              +detail-text-title('KÍCH CỠ')
+              .detail__size__container
+                select
+                  each item in detailMainRightSize
+                    option(value=item)= item
+                i.fa.fa-caret-down
+            .detail__right__quantity
+              +detail-text-title('SỐ LƯỢNG')
+              form
+                .detail__quantity__detail
+                  input
+                  i.fa.fa-minus
+                  i.fa.fa-plus
+                +button-add-to-cart
+            .detail__right__compare
+              ul
+                each item in detailMainRightCompare
+                  li
+                    a(href='#')
+                      i(class=item.class)
+                      p= item.text
+            .detail__right__description
+              +detail-text-title('MÔ TẢ')
+              p Một hợp chất có trong rượu vang được gọi là resveratro có khả năng làm tăng tối đa tuổi thọ. Resveratro còn có khả năng ngăn chặn mật độ ôxy hoá của protein béo.
+            .detail__right__social
+              .detail__social__fb
+                button
+                  i.fa.fa-facebook-official 
+                  span Like 
+                p 0 
+              .detail__social__tw
+                button
+                  i.fa.fa-twitter
+                  span Tweet
+                p 0 
+              .detail__social__gg
+                button
+                  i.fa.fa-google-plus
+                p 0 
+              .detail__social__in
+                button
+                  i.fa.fa-linkedin
+                  span Share 
+              .detail__social__pi
+                button
+                  i.fa.fa-pinterest-square
+    .detail__content
+      .wrapper
+        .detail__content__container
+          .detail__content__left
+            .detail__content__title
+              +detail-text-title('ĐẶC ĐIỂM NỔI BẬT')
+              +detail-text-title('THÔNG TIN SẢN PHẨM')
+              +detail-text-title('ĐÁNH GIÁ')
+            .detail__content__text
+              p Đừng nghĩ rằng chỉ vì đôi chân to mà bạn không thể mặc được món đồ nào khác ngoài quần dài. Sau đây là những item vừa trendy lại vừa có tác dụng rất hiệu quả trong việc điều chỉnh đôi chân to của bạn. Mùa hè là mùa của những bộ cánh thoải mái, thoáng mát và hẳn cô gái nào cũng muốn khoe chân tối đa. Tuy nhiên, điều này lại không hề dễ dàng đối với những cô nàng sở hữu đôi chân to.Đừng nghĩ rằng chỉ vì đôi chân to mà bạn không thể mặc được món đồ nào khác ngoài quần dài. Sau đây là những item vừa trendy lại vừa có tác dụng rất hiệu quả trong việc điều chỉnh đôi chân to của bạn.
+              P Mùa hè là mùa của những bộ cánh thoải mái, thoáng mát và hẳn cô gái nào cũng muốn khoe chân tối đa. Tuy nhiên, điều này lại không hề dễ dàng đối với những cô nàng sở hữu đôi chân to. Vậy diện đồ thế nào để vừa tạo cảm giác nhẹ nhàng nhưng lại khéo léo giấu được nhược điểm ấy? Sau đây, chúng tôi xin đưa ra gợi ý về loạt item mà các cô nàng chân to nên gắn bó trong mùa hè này.
+          .detail__content__right
+            img(src='./assets/images/detail-content-right.png')
+            p RƯỢU
+    .detail__related-products
+      .wrapper
+        .detail__related-products__container
+          .detail__related-products__title
+            +title-main('SẢN PHẨM LIÊN QUAN')
+          .detail__related-products__slide
+            input#detail-related-products-1(type='radio' name='detail-related-products', checked)
+            input#detail-related-products-2(type='radio' name='detail-related-products')
+            .index__slide__full-images--hidden
+              .index__slide__full-images
+                each item in indexSellingProduct
+                  +product(item.link, item.title, item.price1, item.price2, item.corner)(style=`background-color: ${item.color}; color: ${item.color}`)
+            .index__slide__arrow
+              .index__slide__arrow--left
+                label(for="detail-related-products-1")
+                  i.fa.fa-arrow-left
+              .index__slide__arrow--right
+                label(for="detail-related-products-2")
+                  i.fa.fa-arrow-right

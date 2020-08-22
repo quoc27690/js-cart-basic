@@ -1,0 +1,288 @@
+@import ../base/_mixins
+@import ../base/_variables
+
+.title-main
+  p 
+    @include mt-mb(0, 10px)
+    color: initial
+    font-size: $font-size-title-main
+    text-align: center
+    letter-spacing: 4px
+
+.title-product
+  p 
+    @include mt-mb(0, 5px)
+    color: initial
+    font-size: $font-size-title-product
+
+.price-product
+  p
+    color: $color-hover
+    font-family: utm-caviar
+    font-size: $font-size-sale-price
+
+.button-more
+  button
+    width: 115px
+    height: 31px
+    background-color: $color-black
+    color: $color-white
+    font-family: "Times New Roman"
+    font-size: $font-size-primary
+    letter-spacing: 2px
+
+    &:hover
+      background-color: $color-hover
+
+.button-add-to-cart
+  button
+    width: 122px
+    height: 29px
+    background-color: $color-black
+    color: $color-white
+    font-family: "Times New Roman"
+    font-size: $font-size-primary
+    letter-spacing: 1px
+
+    &:hover
+      background-color: $color-hover
+
+.time-box
+  border: 0.5px solid $color-hover
+  text-align: center
+
+  p
+    color: $color-hover
+
+    &:first-child
+      @include pt-pb(10px, 0)
+      font-family: utm-caviar
+      font-size: $font-size-time-box-num
+    
+    &:last-child
+      @include pt-pb(5px, 15px)
+      font-size: $font-size-time-box-text
+
+.corner-big  
+  .corner
+    position: absolute
+    top: -86px
+    left: -86px
+    width: 172px
+    height: 172px
+    background-color: $color-hover
+    transform: rotate(-45deg)
+
+    p 
+      @include pt-pb(125px, 0)
+      color: $color-white
+      font-size: $font-size-corner-big
+
+  .underline
+    position: absolute
+    top: -92px
+    left: -92px
+    width: 184px
+    height: 184px
+    border: 1px solid $color-hover
+    transform: rotate(-45deg)
+
+.corner-small
+  .corner
+    position: absolute
+    top: -41px
+    left: -41px
+    width: 82px
+    height: 82px
+    background-color: inherit
+    transform: rotate(-45deg)
+
+    p 
+      @include pt-pb(60px, 0)
+      color: $color-white
+      font-size: $font-size-corner-small
+
+  .underline
+    position: absolute
+    top: -44px
+    left: -44px
+    width: 88px
+    height: 88px
+    border: 1px solid
+    transform: rotate(-45deg)
+
+.product
+  position: relative
+  overflow: hidden
+  flex: 1
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+
+  &:first-child, &:nth-child(5)
+    @include ml-mr(0, 15px)
+
+  &:nth-child(4), &:last-child
+    @include ml-mr(15px, 0)
+
+  &:not(:first-child, &:nth-child(4), &:nth-child(5), &:last-child)
+    @include ml-mr(15px, 15px)
+    
+  .product__title
+    @include mt-mb(20px, 0)
+  
+  &__image
+    img 
+      width: 100%
+
+  &__title
+    @include mt-mb(40px, 0)
+
+    p 
+      color: $color-black
+      font-size: $font-size-product-title
+
+  &__price
+    display: flex
+    justify-content: center
+    align-items: flex-end
+    
+    p 
+      font-family: utm-caviar
+
+      &:first-child
+        color: $color-hover
+        font-size: $font-size-product-price
+      
+      &:last-child
+        color: $color-primary
+        font-size: $font-size-product-price-old
+        text-decoration: line-through
+  
+  .button-add-to-cart
+    @include mt-mb(20px, 0)
+  
+  &__compare
+    position: absolute
+    left: 0
+    right: 0
+    top: 65%
+    visibility: hidden
+    opacity: 0
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    background-color: $color-black
+    @include transition
+
+    a 
+      display: flex
+      @include pt-pb(8px, 8px)
+      color: $color-primary
+      font-size: $font-size-compare
+      @include transition
+
+      &:first-child
+        @include pl-pr(19px, 15px)
+        border-right: 1px solid
+      
+      &:nth-child(2)
+        @include pl-pr(15px, 15px)
+        border-right: 1px solid
+        
+      &:last-child
+        @include pl-pr(19px, 8px)
+
+      i
+        @include pl-pr(0, 8px)
+        
+  &:hover
+    .product__compare
+      visibility: visible
+      opacity: 1
+    
+.blog__item
+  &__image
+    position: relative
+
+    img 
+      width: 100%
+
+    &:hover
+      .blog__image__hover
+        .blog__hover__bg, .blog__hover__icon i
+          visibility: visible
+          opacity: 1
+
+    .blog__image__hover
+      .blog__hover__bg
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        visibility: hidden
+        opacity: 0
+        background: linear-gradient(to bottom right, transparent 50%, $color-blog-hover 50% )
+        @include transition
+
+      .blog__hover__icon
+        i
+          position: absolute
+          top: 50%
+          left: 50%
+          visibility: hidden
+          opacity: 0
+          @include pl-pr(10px, 10px)
+          @include pt-pb(10px, 10px)
+          border-radius: 50%
+          background-color: $color-white
+          color: $color-black
+          font-size: $font-size-blog-link
+          transform: translate(-50%, -50%)
+          @include transition
+
+      a 
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%       
+  
+  &__title
+    @include mt-mb(20px, 0)
+    
+    a
+      color: $color-black
+      font-size: $font-size-blog-title
+      text-transform: uppercase
+      @include transition
+
+  &__time
+    @include mt-mb(10px, 0)
+
+    p 
+      font-size: $font-size-primary
+      color: $color-primary
+      opacity: 0.5
+
+  &__content
+    @include mt-mb(10px, 0)
+
+    p 
+      font-size: $font-size-blog-content
+      color: $color-primary
+
+  &__read-more
+    @include mt-mb(5px, 0)
+
+    a 
+      font-size: $font-size-blog-content
+      color: $color-primary
+      opacity: 0.5
+      @include transition
+
+.detail-text-title
+  p
+    color: $color-primary
+    font-size: $font-size-detail-text-title

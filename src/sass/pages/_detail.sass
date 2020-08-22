@@ -1,0 +1,447 @@
+@import ../base/_mixins
+@import ../base/_variables
+
+.detail
+    &__link
+      @include mt-mb(30px, 0)
+      
+      .wrapper
+        ul
+          display: flex
+
+          li
+            float: none
+
+            &:not(:last-child)
+              &::after
+                content: '/'
+                @include ml-mr(4px, 4px)
+
+            a
+              color: $color-primary
+              font-size: $font-size-detail-link
+
+    &__main
+      @include mt-mb(35px, 0)
+      
+      .wrapper
+        .detail__main__container
+          @include grid(12, 30px)
+          
+          .detail__main__left-middle
+            grid-column: 1/13
+            @include md
+              grid-column: 1/8
+            @include grid(7, 30px)
+            border: 1px solid $color-detail-main-left-middle-border
+            
+            .detail__main__left
+              position: relative
+              grid-column: 1/2
+              border-right: 1px solid $color-detail-main-left-middle-border
+
+
+              input
+                position: absolute
+                visibility: hidden
+              
+              .detail__slide__full-images--hidden
+                overflow: hidden         
+                height: 580px
+                @include mt-mb(60px, 0)
+
+                .detail__slide__full-images
+                  display: flex
+                  flex-direction: column
+                  transform: translateY(0)
+                  @include transition
+
+                  .detail__slide__image
+                    position: relative
+                    width: 100%
+                    height: 84px
+
+                    &:hover
+                      border: 2px solid $color-hover
+                      
+                    &:not(:first-child)
+                      @include mt-mb(35px, 0)
+
+                      &::before
+                        position: absolute
+                        content: ""
+                        top: -22%
+                        left: 28%
+                        right: 28%
+                        bottom: 0
+                        border-top: 1px solid $color-primary
+                        opacity: 0.5
+                        
+                    img
+                      width: 100%
+                      height: 100%
+                      object-fit: contain
+                      
+              #detail-slide-1:checked ~ .detail__slide__full-images--hidden .detail__slide__full-images
+                transform: translateY(0)
+              #detail-slide-2:checked ~ .detail__slide__full-images--hidden .detail__slide__full-images
+                transform: translateY(-580px)
+              
+              .detail__slide__arrow
+                &--up
+                  position: absolute
+                  top: 3%
+                  left: 40%
+
+                &--down
+                  position: absolute
+                  bottom: 3%
+                  left: 40%
+                
+                &--up, &--down
+                  i
+                    color: $color-hover
+                    font-size: $font-size-slide-arrow
+                    cursor: pointer
+
+            .detail__main__middle
+              grid-column: 2/8
+
+              img 
+                width: 100%
+                @include mt-mb(7px, 0)
+                
+          .detail__main__right
+            grid-column: 1/13
+            @include md
+              grid-column: 8/13
+
+            .detail__right__price
+              @include mt-mb(5px, 0)
+
+            .detail__right__review
+              display: flex
+              @include pt-pb(18px, 18px)
+              @include mt-mb(10px, 0)
+              border-top: 1px solid $color-primary
+              border-bottom: 1px solid $color-primary
+              
+              ul
+                display: flex
+                @include ml-mr(0, 8px)
+
+                li 
+                  float: none
+                  @include ml-mr(0, 2px)
+
+              i, p
+                color: $color-primary
+                font-size: $font-size-primary
+            
+            .detail__right__color
+              @include mt-mb(27px, 0)
+              
+              button
+                width: 29px
+                height: 29px
+                @include ml-mr(0, 7px)
+                @include mt-mb(15px, 0)
+                
+                &:focus
+                  outline: solid
+                  outline-offset: 2px
+                  outline-color: $color-primary
+
+            .detail__right__size
+              @include mt-mb(20px, 0)
+
+              .detail__size__container
+                position: relative
+                display: inline
+
+                select
+                  width: 30%
+                  height: 30px
+                  @include pl-pr(10px, 0)
+                  border: 1px solid $color-primary
+                  @include mt-mb(15px, 0)
+                  color: $color-primary
+                  font-family: 'Times New Roman'
+                  font-size: $font-size-blog-title
+                  outline: none
+                  appearance: none
+
+                i
+                  position: absolute
+                  top: -5px
+                  right: 10px
+                  font-size: $font-size-blog-title
+                  transform: scale(1.2)
+
+            .detail__right__quantity
+              @include mt-mb(25px, 0)
+              
+              form
+                display: flex
+                @include mt-mb(15px, 0)
+
+                .detail__quantity__detail
+                  position: relative
+                  display: flex
+                  align-items: center
+                  min-height: 100%
+                  @include ml-mr(0, 18px)
+                  background-color: $color-detail-main-right-quantity
+                    
+                  input
+                    width: 64px
+                    height: 25px
+                    @include pl-pr(20%, 0)
+                    @include ml-mr(29px, 29px)
+                    color: $color-primary
+                    font-family: 'Times New Roman'
+                    font-size: $font-size-blog-title
+                  
+                  i 
+                    position: absolute
+                    color: $color-primary
+
+                    &:first-of-type
+                      left: 10px
+                      
+                    &:last-of-type
+                      right: 10px
+                      
+            .detail__right__compare
+              @include mt-mb(33px, 0)
+
+              ul
+                display: flex
+
+                li
+                  float: none
+                  @include ml-mr(0, 30px)
+                  
+                  a
+                    display: flex
+                    color: $color-primary
+                    font-size: $font-size-detail-compare
+                    @include transition
+
+                    i 
+                      @include ml-mr(0, 8px)
+                      
+            .detail__right__description
+              @include mt-mb(33px, 0)
+              
+              p
+                @include mt-mb(12px, 0)
+                font-size: $font-size-detail-description
+
+            .detail__right__social
+              display: flex
+              @include mt-mb(35px, 0)
+              
+              .detail__social__fb, .detail__social__tw, .detail__social__gg, .detail__social__in, .detail__social__pi
+                display: flex
+                align-items: center
+                @include ml-mr(0, 10px)
+
+                button
+                  @include pt-pb(2px, 2px)
+                  @include ml-mr(0, 6px)
+                  border-radius: 2px
+                  
+                  i 
+                    font-size: $font-size-primary
+
+                  span
+                    font-size: $font-size-detail-social-text
+
+                p
+                  position: relative
+                  display: flex
+                  align-items: center
+                  height: 100%
+                  border: 1px solid $color-primary
+                  border-radius: 2px
+                  color: $color-primary
+                  font-size: $font-size-detail-social-text
+
+                  &::before
+                    top: 20%
+                    right: 100%
+                    border-right: 5px solid $color-primary
+                    @extend %detail-main-social-before-after
+
+                  &::after
+                    top: 20%
+                    right: 95%
+                    border-right: 5px solid $color-white
+                    @extend %detail-main-social-before-after
+
+              .detail__social__fb
+                button
+                  @include pl-pr(4px, 5px)
+                  background-color: $color-detail-main-right-social-fb
+                  color: $color-white
+
+                  i
+                    @include ml-mr(0, 4px)
+                
+                p
+                  @include pl-pr(8px, 7px)
+                  
+              .detail__social__tw
+                button
+                  @include pl-pr(4px, 3px)
+                  background-color: $color-detail-main-right-social-bg
+                  
+                  i
+                    @include ml-mr(0, 2px)
+                    color: $color-detail-main-right-social-tw
+
+                  span
+                    color: $color-black
+
+                p
+                  @include pl-pr(5px, 4px)
+
+              .detail__social__gg
+                button
+                  @include pl-pr(5px, 6px)
+                  background-color: $color-detail-main-right-social-bg
+                  
+                  i
+                    color: $color-detail-main-right-social-gg
+
+                p
+                  @include pl-pr(6px, 6px)
+
+              .detail__social__in
+                button
+                  @include pl-pr(3px, 5px)
+                  background-color: $color-detail-main-right-social-in
+                  color: $color-white
+
+                  i
+                    @include pl-pr(0, 2px)
+                    border-right: 1px solid $color-primary
+
+                  span
+                    @include pl-pr(5px, 0)
+                                    
+
+                p
+                  @include pl-pr(6px, 6px)
+
+              .detail__social__pi
+                button
+                  @include pl-pr(5px, 5px)
+                  background-color: $color-detail-main-right-social-bg
+                  color: $color-detail-main-right-social-pi
+                
+    &__content
+      @include mt-mb(80px, 0)
+      
+      .wrapper
+        .detail__content__container
+          @include grid(12, 30px)
+          
+          .detail__content__left
+            grid-column: 1/13
+            @include lg
+              grid-column: 1/9
+
+            .detail__content__title
+              display: flex
+
+              .detail-text-title
+                @include pl-pr(9px, 12px)
+                @include pt-pb(12px, 9px)
+                @include ml-mr(0, 5px)
+                
+                p 
+                  letter-spacing: 2px
+
+                &:hover
+                  background-color: $color-hover
+
+                  p
+                    color: $color-white
+                
+            .detail__content__text
+              @include mt-mb(15px, 0)
+              
+              p
+                font-size: $font-size-detail-description
+
+                &:first-child
+                  text-indent: 9px
+                
+          .detail__content__right
+            position: relative
+            display: none
+            @include lg
+              grid-column: 9/13
+              display: block
+
+            p 
+              position: absolute
+              top: 0
+              left: 0
+              right: 0
+              bottom: 0
+              display: flex
+              justify-content: center
+              align-items: center
+              color: $color-white
+              font-size: $font-size-detail-content-right
+              font-family: "Roboto Thin"
+
+    &__related-products
+      @include mt-mb(120px, 155px)
+      
+      .wrapper
+        .detail__related-products__container
+          text-align: center
+
+          .detail__related-products__slide
+            position: relative
+            @include mt-mb(45px, 0)
+
+            input
+              position: absolute
+              visibility: hidden
+
+            .index__slide__full-images--hidden
+              overflow: hidden
+
+              .index__slide__full-images
+                display: flex
+                width: 200%
+                transform: translateX(0%)
+                @include transition
+                
+            #detail-related-products-1:checked ~ .index__slide__full-images--hidden .index__slide__full-images
+              transform: translateX(0%)
+            #detail-related-products-2:checked ~ .index__slide__full-images--hidden .index__slide__full-images
+              transform: translateX(-50%)
+            
+            .index__slide__arrow
+
+              &--left
+                position: absolute
+                top: 50%
+                left: -15px
+
+              &--right
+                position: absolute
+                top: 50%
+                right: -15px
+              
+              &--left, &--right
+                i
+                  color: $color-hover
+                  font-size: $font-size-slide-arrow
+                  cursor: pointer

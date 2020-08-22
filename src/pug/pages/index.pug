@@ -1,0 +1,111 @@
+extends ../layouts/default-layout
+
+block title
+  title Trang chủ
+
+block header-top-menu
+  .header__top-menu
+    .header__top-menu--absolute
+      include ../partials/header-top-menu
+
+block header-slide
+  include ../partials/header-slide
+
+block container
+  .index
+    .index__intro
+      .wrapper
+        .index__intro__container
+          .index__intro__title
+            +title-main('GIỚI THIỆU')
+          .index__intro__content
+            p Mriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui faciteorum claritatem. Investigtiones demonstraverunt lectores legere me lius quod ii legunt saepius.Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putam
+          .index__intro__more
+            +button-more('XEM THÊM')
+    .index__sale
+      .wrapper
+        .index__sale__container
+          img(src='./assets/images/index-sale-bg.png')
+          .index__sale__product
+            .index__sale__product--wrapper
+              .index__sale__item
+                img(src='./assets/images/index-sale-product.png')
+                +corner-big('Sale') 
+              .index__sale__detail
+                .index__detail__title
+                  +title-product('RƯỢU NHO NĂM 1987')
+                .index__detail__price
+                  +price-product('330.000')
+                .index__detail__button
+                  +button-add-to-cart
+                .index__detail__content
+                  p Một hợp chất có trong rượu vang được gọi là resveratro có khả năng làm tăng tối đa tuổi thọ. Resveratro còn có khả năng ngăn chặn mật độ ôxy hoá của protein béo.
+                .index__detail__time
+                  each item in timeBox
+                    +time-box(item.num, item.text)
+    .index__new-products
+      .wrapper
+        .index__new-products__container
+          .index__new-products__title
+            +title-main('SẢN PHẨM MỚI')
+          .index__new-products__slide
+            input#index-new-products-1(type='radio' name='index-new-products', checked)
+            input#index-new-products-2(type='radio' name='index-new-products')
+            .index__slide__full-images--hidden
+              .index__slide__full-images
+                each item in indexNewProduct
+                  +product(item.link, item.title, item.price1, item.price2, item.corner)(style=`background-color: ${item.color}; color: ${item.color}`)
+            .index__slide__arrow
+              .index__slide__arrow--left
+                label(for="index-new-products-1")
+                  i.fa.fa-arrow-left
+              .index__slide__arrow--right
+                label(for="index-new-products-2")
+                  i.fa.fa-arrow-right
+    .index__images
+      each link in indexImages
+        +index-images-item(link)
+    .index__selling-products
+      .wrapper
+        .index__selling-products__container
+          .index__selling-products__title
+            +title-main('SẢN PHẨM BÁN CHẠY')
+          .index__selling-products__slide
+            input#index-selling-products-1(type='radio' name='index-selling-products', checked)
+            input#index-selling-products-2(type='radio' name='index-selling-products')
+            .index__slide__full-images--hidden
+              .index__slide__full-images
+                each item in indexSellingProduct
+                  +product(item.link, item.title, item.price1, item.price2, item.corner)(style=`background-color: ${item.color}; color: ${item.color}`)
+            .index__slide__arrow
+              .index__slide__arrow--left
+                label(for="index-selling-products-1")
+                  i.fa.fa-arrow-left
+              .index__slide__arrow--right
+                label(for="index-selling-products-2")
+                  i.fa.fa-arrow-right
+    .index__blog-customer
+      .wrapper
+        .index__blog-customer__container
+          .index__blog
+            .index__blog__title
+              +title-main('TIN TỨC & BLOG')
+            .index__blog__item
+              each item in indexBlog
+                +blog-item(item.link, item.text1, item.text2, item.text3)
+          .index__customer
+              .index__customer__title
+                +title-main('KHÁCH HÀNG')
+              .index__customer__content
+                img(src='./assets/images/index-customer-circle.png')
+                .index__content__comment
+                  p Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long ...
+                  a(href='#') Read more
+                .index__content__avatar
+                  img(src='./assets/images/index-customer-avatar.png')
+                  p GIANG LT
+                  p Graphic design
+                .index__content__dots
+                  span
+                  span
+                  span

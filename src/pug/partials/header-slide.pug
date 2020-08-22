@@ -1,0 +1,15 @@
+.header__slide
+  - var n = 1;
+  while n < 4
+    input(id=`header-slide-${n++}`  type='radio' name='header-slide')
+  .header__slide__full-images
+    - var n = 1;
+    while n < 4
+      img(src=`./assets/images/header-slide-${n++}.jpg`)
+  .header__slide__text
+    .wrapper
+      img(src='./assets/images/header-slide-text.png')
+  .header__slide__rectangle
+    - var n = 1;
+    while n < 4
+      label(for=`header-slide-${n++}`)
