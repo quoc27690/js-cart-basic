@@ -1,0 +1,72 @@
+@import ../base/_mixins
+@import ../base/_variables
+
+.register
+  .register__title
+    @include mt-mb(25px, 0)
+
+    .wrapper
+      .register__title__container
+        display: flex
+        justify-content: space-between
+        align-items: center
+  
+  .register__content
+    @include mt-mb(30px, 125px)
+    
+    .wrapper
+      .register__content__container
+        @include pl-pr(55px, 67px)
+        @include pt-pb(45px, 45px)
+        border: 1px solid $color-border
+        color: $color-black
+        font-size: $font-size-login-content
+
+        .register__content__title
+          p
+            font-size: $font-size-login-title
+
+        .register__content__form
+          form
+            & > .input-text
+              @include mt-mb(20px, 0)
+
+            & > .input-text + .input-text
+              @include mt-mb(25px, 0)
+
+            .input-text
+              label
+                flex-basis: 8%
+
+                span
+                  @include ml-mr(5px, 0)
+                  
+              input
+                flex-grow: 1
+                height: 31px
+                @include pl-pr(10px, 10px)
+            
+            .extend
+              label
+                flex-basis: 14%
+
+            .input-checkbox
+              @include mt-mb(20px, 0)
+              @include ml-mr(8%, 0)
+
+              label
+                font-weight: bold
+
+            .register__form__title
+              @include mt-mb(32px, 0)
+              
+              p 
+                font-size: $font-size-login-title
+
+            .register__form__btn
+              display: flex
+              justify-content: flex-end
+
+              .button-small
+                @include ml-mr(7px, 0)
+                @include mt-mb(25px, 0)

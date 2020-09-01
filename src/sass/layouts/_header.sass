@@ -2,6 +2,8 @@
 @import ../base/_variables
 
 header
+  position: relative
+
   .header__top-menu
     .header__top-menu--relative, .header__top-menu--absolute
       z-index: $z-index-header-top-menu
@@ -25,10 +27,21 @@ header
                 content: "-"
               
               a 
+                position: relative
                 @include transition
                 
                 &:hover
                   text-decoration: underline 
+
+                span
+                  position: absolute
+                  left: 100%
+                  bottom: 70%
+                  @include pl-pr(3px, 3px)
+                  border-radius: 500%
+                  background-color: $color-red
+                  color: $color-white
+                  font-size: 10px
 
           &:hover ul
             @include lg-max
@@ -72,7 +85,9 @@ header
           @include transition
 
     .header__top-menu--relative
-      position: relative
+      position: fixed
+      width: 100%
+      background-color: $color-primary
 
       .header__top-menu__left
         &:hover ul
@@ -102,6 +117,92 @@ header
       i 
         color: $color-primary
 
+    .header__top-menu__left
+      #modal
+        display: none
+
+        .modal
+          position: fixed
+          top: 0
+          left: 0
+          width: 100%
+          height: 100%
+          background-color: $color-modal-bg
+
+          &__content
+            position: relative
+            background-color: $color-white
+            top: 25%
+            left: 25%
+            width: 760px
+            height: 360px
+            animation: animatetop 0.7s
+
+            @keyframes animatetop 
+              from 
+                top: -100%
+                opacity: 0
+              to 
+                top: 25%
+                opacity: 1
+              
+            & > img
+              position: absolute
+              top: 0
+              left: 0
+              height: 100%
+
+            & > i
+              position: absolute
+              left: 100%
+              bottom: 96%
+              display: block
+              color: $color-modal-close
+              font-size: $font-size-modal-close
+
+            &__text
+              display: flex
+              flex-direction: column
+              justify-content: center
+              align-items: center
+              height: 100%
+              @include ml-mr(30%, 10%)
+              color: $color-black
+              font-size: $font-size-modal-content
+              text-align: center
+
+              & > p
+                &:first-of-type
+                  font-size: $font-size-modal-title
+                
+                &:last-of-type
+                  @include mt-mb(30px, 0)
+              
+              form
+                display: flex
+                @include mt-mb(20px, 0)
+                
+
+                input
+                  @include pl-pr(10px, 5px) 
+
+                button
+                  @include pl-pr(10px, 10px)     
+                  @include pt-pb(10px, 10px)            
+                  background-color: $color-hover
+                  color: $color-white
+              
+              .input-checkbox
+                @include mt-mb(25px, 0)
+                
+                input
+                  position: relative
+                  visibility: visible
+
+                  &::after
+                    position: absolute
+                    visibility: hidden
+
   .header__slide
     position: relative
     overflow: hidden
@@ -121,7 +222,6 @@ header
 
         @include md
           height: 664px
-        
 
     #header-slide-1:checked ~ .header__slide__full-images
       transform: translateX(0%)

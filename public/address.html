@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Địa Chỉ Của Bạn</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+  </head>
+  <body>
+    <header>
+      <div class="header__top-menu">
+        <div class="header__top-menu--relative">
+          <div class="wrapper">
+            <div class="header__top-menu__left"><i class="fa fa-bars"></i>
+              <ul>
+                <li><a href="./address.html">Tài khoản của tôi</a></li>
+                <li><a href="./order.html">Trạng thái đơn hàng</a></li>
+                <li><a onclick="document.getElementById('modal').style.display='block'">Danh sách ưa thích</a></li>
+                <li><a href="./cart.html">Giỏ hàng<span>0</span></a></li>
+                <li><a href="./login.html">Đặng nhập</a></li>
+                <li><a href="./register.html">Đăng ký</a></li>
+              </ul>
+              <div id="modal">
+                <div class="modal">
+                  <div class="modal__content"><img src="./assets/images/modal.png"><i class="fa fa-times" onclick="document.getElementById('modal').style.display='none'"></i>
+                    <div class="modal__content__text">
+                      <p>Gửi Email</p>
+                      <p>Đăng ký Email ngay hôm nay để nhận được thông tin về các sự kiện, các chương trình giảm giá của chúng tôi sớm nhất!</p>
+                      <form>
+                        <input>
+                        <button>GỬI EMAIL</button>
+                      </form>
+                      <div class="input-checkbox">
+                        <input type="checkbox" id="Không hiển thị lại thông báo này" value=""/>
+                        <label for="Không hiển thị lại thông báo này">Không hiển thị lại thông báo này</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header__top-menu__right">
+              <form>
+                <input placeholder="Tìm kiếm ở đây ...">
+                <button><i class="fa fa-search"></i></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__main-menu">
+        <div class="wrapper">
+          <div class="header__main-menu__logo"><img src="./assets/images/header-main-menu-logo.png"></div>
+          <div class="header__main-menu__list"><i class="fa fa-bars header__list__icon"></i>
+            <ul class="header__list__menu">
+              <li> <a class="header__list__item" href="./index.html">Trang chủ</a></li>
+              <li> <a class="header__list__item" href="./detail.html">Rượu vang đỏ</a>
+                <div class="header__list__sub">
+                  <div class="header__sub__title">
+                    <p>Rượu ngoại</p>
+                    <ul class="header__sub__item">
+                      <li><a href="#">Rượu Chivas</a></li>
+                      <li><a href="#">Hàng độc - Rượu độc đáo</a></li>
+                      <li><a href="#">Johnnie Walker</a></li>
+                      <li><a href="#">Rượu Whisky</a></li>
+                      <li><a href="#">Rượu Remy Martin</a></li>
+                      <li><a href="#">Rượu Glenmorangie</a></li>
+                    </ul>
+                  </div>
+                  <div class="header__sub__title">
+                    <p>Rượu vang</p>
+                    <ul class="header__sub__item">
+                      <li><a href="#">Rượu Chivas</a></li>
+                      <li><a href="#">Hàng độc - Rượu độc đáo</a></li>
+                      <li><a href="#">Johnnie Walker</a></li>
+                      <li><a href="#">Rượu Whisky</a></li>
+                      <li><a href="#">Rượu Remy Martin</a></li>
+                      <li><a href="#">Rượu Glenmorangie</a></li>
+                    </ul>
+                  </div>
+                  <div class="header__sub__title">
+                    <p>Rượu ngoại</p>
+                    <ul class="header__sub__item">
+                      <li><a href="#">Rượu Chivas</a></li>
+                      <li><a href="#">Hàng độc - Rượu độc đáo</a></li>
+                      <li><a href="#">Johnnie Walker</a></li>
+                      <li><a href="#">Rượu Whisky</a></li>
+                      <li><a href="#">Rượu Remy Martin</a></li>
+                      <li><a href="#">Rượu Glenmorangie</a></li>
+                    </ul>
+                  </div>
+                  <div class="header__sub__image"><img src="./assets/images/header-main-menu-sub.png"></div>
+                  <div class="header__sub__triangle"></div>
+                </div>
+              </li>
+              <li> <a class="header__list__item" href="./products-grid.html">Rượu vang trắng</a></li>
+              <li> <a class="header__list__item" href="./error.html">Champagne</a></li>
+              <li> <a class="header__list__item" href="./introduce.html">Thông tin</a></li>
+              <li> <a class="header__list__item" href="./blog.html">Blog</a></li>
+              <li> <a class="header__list__item" href="./contact.html">Liên hệ</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="address">
+      <div class="link">
+        <div class="wrapper">
+          <ul>
+            <li><a href="./index.html">Trang chủ</a></li>
+            <li><a href="./address.html">Địa chỉ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="address__title">
+        <div class="wrapper">
+          <div class="title-product">
+            <p>ĐỊA CHỈ</p><img src="./assets/images/arrow.png"/>
+          </div>
+        </div>
+      </div>
+      <div class="address__content">
+        <div class="wrapper">
+          <div class="address__content__container">
+            <div class="address__content__top">
+              <div class="address__top__left">
+                <p>ĐỊA CHỈ CỦA BẠN</p>
+                <div class="address-1">
+                  <div class="input-text">
+                    <label for="Tên">Tên
+                    </label>
+                    <input type="text" id="Tên" value="Giang"/>
+                  </div>
+                  <div class="input-text">
+                    <label for="Họ &amp; tên đệm">Họ &amp; tên đệm
+                    </label>
+                    <input type="text" id="Họ &amp; tên đệm" value="Lê Anh"/>
+                  </div>
+                  <div class="input-text">
+                    <label for="Công ty">Công ty
+                    </label>
+                    <input type="text" id="Công ty" value="Cổ phần công nghệ DKT"/>
+                  </div>
+                  <div class="input-text">
+                    <label for="Địa chỉ">Địa chỉ
+                    </label>
+                    <input type="text" id="Địa chỉ" value="Tòa nhà Hà Nội Group, 442 Đội Cấn, Ba Đình, Hà Nội"/>
+                  </div>
+                  <div class="input-text">
+                    <label for="Thành phố">Thành phố
+                    </label>
+                    <input type="text" id="Thành phố" value="Hà Nội"/>
+                  </div>
+                  <div class="input-text">
+                    <label for="Quốc tịch">Quốc tịch
+                    </label>
+                    <input type="text" id="Quốc tịch" value="Việt Nam"/>
+                  </div>
+                  <div class="input-text">
+                    <label for="Postal/Zip Code">Postal/Zip Code
+                    </label>
+                    <input type="text" id="Postal/Zip Code" value="2300089"/>
+                  </div>
+                  <div class="input-text">
+                    <label for="Phone">Phone
+                    </label>
+                    <input type="text" id="Phone" value="0974554928"/>
+                  </div>
+                  <div class="input-checkbox">
+                    <input type="checkbox" id="Đặt làm địa chỉ mặc định" value=""/>
+                    <label for="Đặt làm địa chỉ mặc định">Đặt làm địa chỉ mặc định</label>
+                  </div>
+                  <div class="address-1__btn">
+                    <div class="button-address">
+                      <button>Chỉnh sửa địa chỉ</button>
+                    </div>
+                    <div class="button-address">
+                      <button>Xóa</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="address__top__right"><a href="#">Thêm địa chỉ</a>
+                <div class="address-1">
+                  <div class="input-text">
+                    <label for="Tên">Tên
+                    </label>
+                    <input type="text" id="Tên" value="Giang"/>
+                  </div>
+                  <div class="input-text">
+                    <label for="Họ &amp; tên đệm">Họ &amp; tên đệm
+                    </label>
+                    <input type="text" id="Họ &amp; tên đệm" value="Lê Anh"/>
+                  </div>
+                  <div class="input-text">
+                    <label for="Công ty">Công ty
+                    </label>
+                    <input type="text" id="Công ty" value="Cổ phần công nghệ DKT"/>
+                  </div>
+                  <div class="input-text">
+                    <label for="Địa chỉ">Địa chỉ
+                    </label>
+                    <input type="text" id="Địa chỉ" value="Tòa nhà Hà Nội Group, 442 Đội Cấn, Ba Đình, Hà Nội"/>
+                  </div>
+                  <div class="input-text">
+                    <label for="Thành phố">Thành phố
+                    </label>
+                    <input type="text" id="Thành phố" value="Hà Nội"/>
+                  </div>
+                  <div class="input-text">
+                    <label for="Quốc tịch">Quốc tịch
+                    </label>
+                    <input type="text" id="Quốc tịch" value="Việt Nam"/>
+                  </div>
+                  <div class="input-text">
+                    <label for="Postal/Zip Code">Postal/Zip Code
+                    </label>
+                    <input type="text" id="Postal/Zip Code" value="2300089"/>
+                  </div>
+                  <div class="input-text">
+                    <label for="Phone">Phone
+                    </label>
+                    <input type="text" id="Phone" value="0974554928"/>
+                  </div>
+                  <div class="input-checkbox">
+                    <input type="checkbox" id="Đặt làm địa chỉ mặc định" value=""/>
+                    <label for="Đặt làm địa chỉ mặc định">Đặt làm địa chỉ mặc định</label>
+                  </div>
+                  <div class="address-1__btn">
+                    <div class="button-address">
+                      <button>Chỉnh sửa địa chỉ</button>
+                    </div>
+                    <div class="button-address">
+                      <button>Xóa</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="address__content__bottom">
+              <div class="address-2">
+                <div class="input-text">
+                  <label for="Tên">Tên
+                  </label>
+                  <input type="text" id="Tên" value="Giang"/>
+                </div>
+                <div class="input-text">
+                  <label for="Họ &amp; tên đệm">Họ &amp; tên đệm
+                  </label>
+                  <input type="text" id="Họ &amp; tên đệm" value="Lê Anh"/>
+                </div>
+                <div class="input-text">
+                  <label for="Công ty">Công ty
+                  </label>
+                  <input type="text" id="Công ty" value="Cổ phần công nghệ DKT"/>
+                </div>
+                <div class="input-text">
+                  <label for="Địa chỉ">Địa chỉ
+                  </label>
+                  <input type="text" id="Địa chỉ" value="Tòa nhà Hà Nội Group, 442 Đội Cấn, Ba Đình, Hà Nội"/>
+                </div>
+                <div class="input-text">
+                  <label for="Thành phố">Thành phố
+                  </label>
+                  <input type="text" id="Thành phố" value="Hà Nội"/>
+                </div>
+                <div class="input-text">
+                  <label for="Quốc tịch">Quốc tịch
+                  </label>
+                  <input type="text" id="Quốc tịch" value="Việt Nam"/>
+                </div>
+                <div class="input-text">
+                  <label for="Postal/Zip Code">Postal/Zip Code
+                  </label>
+                  <input type="text" id="Postal/Zip Code" value="2300089"/>
+                </div>
+                <div class="input-text">
+                  <label for="Phone">Phone
+                  </label>
+                  <input type="text" id="Phone" value="0974554928"/>
+                </div><a href="./error.html">Chỉnh sửa địa chỉ</a>
+              </div>
+              <div class="address-2">
+                <div class="input-text">
+                  <label for="Tên">Tên
+                  </label>
+                  <input type="text" id="Tên" value="Giang"/>
+                </div>
+                <div class="input-text">
+                  <label for="Họ &amp; tên đệm">Họ &amp; tên đệm
+                  </label>
+                  <input type="text" id="Họ &amp; tên đệm" value="Lê Anh"/>
+                </div>
+                <div class="input-text">
+                  <label for="Công ty">Công ty
+                  </label>
+                  <input type="text" id="Công ty" value="Cổ phần công nghệ DKT"/>
+                </div>
+                <div class="input-text">
+                  <label for="Địa chỉ">Địa chỉ
+                  </label>
+                  <input type="text" id="Địa chỉ" value="Tòa nhà Hà Nội Group, 442 Đội Cấn, Ba Đình, Hà Nội"/>
+                </div>
+                <div class="input-text">
+                  <label for="Thành phố">Thành phố
+                  </label>
+                  <input type="text" id="Thành phố" value="Hà Nội"/>
+                </div>
+                <div class="input-text">
+                  <label for="Quốc tịch">Quốc tịch
+                  </label>
+                  <input type="text" id="Quốc tịch" value="Việt Nam"/>
+                </div>
+                <div class="input-text">
+                  <label for="Postal/Zip Code">Postal/Zip Code
+                  </label>
+                  <input type="text" id="Postal/Zip Code" value="2300089"/>
+                </div>
+                <div class="input-text">
+                  <label for="Phone">Phone
+                  </label>
+                  <input type="text" id="Phone" value="0974554928"/>
+                </div><a href="./error.html">Chỉnh sửa địa chỉ</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer__top"><img src="./assets/images/footer-top-brand.png"></div>
+      <div class="footer__middle">
+        <div class="wrapper">
+          <div class="footer__middle__info">
+            <p>Thông tin</p>
+            <ul>
+              <li><a href="#">Về chúng tôi</a></li>
+              <li><a href="#">Giao hàng</a></li>
+              <li><a href="#">Cảm nghĩ</a></li>
+              <li><a href="#">Lưu trữ</a></li>
+              <li><a href="#">Chính sách riêng tư</a></li>
+            </ul>
+          </div>
+          <div class="footer__middle__buy">
+            <p>Mua hàng</p>
+            <ul>
+              <li><a href="#">Vận chuyển và trả hàng</a></li>
+              <li><a href="#">Mua hàng an toàn</a></li>
+              <li><a href="#">Vận quốc tế</a></li>
+              <li><a href="#">Liên kết</a></li>
+              <li><a href="#">Dịch vụ giảm giá</a></li>
+            </ul>
+          </div>
+          <div class="footer__middle__email">
+            <p>Gửi email</p>
+            <p>Gửi email cho chúng tôi để được hỗ trợ</p>
+            <form>
+              <input placeholder="Enter your email">
+              <div class="footer__email__submit">
+                <button class="footer__email__submit--button">GỬI</button>
+                <div class="footer__email__submit--triangle"></div>
+              </div>
+            </form>
+            <div class="footer__email__social">
+              <ul>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa fa-rss"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__middle__contact">
+            <p>Liên hệ</p>
+            <ul>
+              <li><i class="fa fa-map-marker"></i><a href="#">Tầng 4, Tòa nhà Hanoi Group Số 442 Đội Cấn, P.Cống Vị, Q. Ba Đình, Hà Nội</a></li>
+              <li><i class="fa fa-phone"></i><a href="#">(04) 6674 2332</a></li>
+              <li><i class="fa fa-phone"></i><a href="#">(04) 3786 8904</a></li>
+              <li><i class="fa fa-phone"></i><a href="#">(08) 6680 9686</a></li>
+              <li><i class="fa fa-envelope"></i><a href="#">Support@bizweb.vn</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="footer__bottom">
+        <div class="wrapper">
+          <div class="footer__bottom__left">
+            <p>© Copyright 2008-2014 DKT Technology JSC</p>
+          </div>
+          <div class="footer__bottom__right"><img src="./assets/images/footer-bottom-card.png"></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

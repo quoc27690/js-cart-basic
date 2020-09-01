@@ -33,13 +33,12 @@
             @include md
               grid-column: 1/8
             @include grid(7, 30px)
-            border: 1px solid $color-detail-main-left-middle-border
+            border: 1px solid $color-border
             
             .detail__main__left
               position: relative
               grid-column: 1/2
-              border-right: 1px solid $color-detail-main-left-middle-border
-
+              border-right: 1px solid $color-border
 
               input
                 position: absolute
@@ -356,7 +355,7 @@
             .detail__content__title
               display: flex
 
-              .detail-text-title
+              .detail-title
                 @include pl-pr(9px, 12px)
                 @include pt-pb(12px, 9px)
                 @include ml-mr(0, 5px)
@@ -422,6 +421,9 @@
                 width: 200%
                 transform: translateX(0%)
                 @include transition
+
+                .product
+                  @extend %product-slide
                 
             #detail-related-products-1:checked ~ .index__slide__full-images--hidden .index__slide__full-images
               transform: translateX(0%)

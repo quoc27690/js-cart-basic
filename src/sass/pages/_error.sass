@@ -1,0 +1,62 @@
+@import ../base/_mixins
+@import ../base/_variables
+
+.error
+  position: relative
+  @include mt-mb(35px, 0)
+  
+  & > img
+    width: 100%
+  
+  &__content
+    position: absolute
+    top: 97%
+    left: 0
+    right: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: $font-size-error-content
+
+    ul
+      display: flex
+
+      li
+        position: relative
+        float: none
+
+        &:first-child
+          @include ml-mr(95px, 0)
+
+        &:last-child
+          @include ml-mr(50px, 0)
+        
+        a
+          color: $color-black
+          text-decoration: underline
+          text-transform: uppercase
+
+        i 
+          position: absolute
+          left: 110%
+          color: $color-black
+
+    &__input
+      position: relative
+      @include ml-mr(45px, 0)
+      
+      input
+        width: 200px
+        height: 36px
+        @include pl-pr(40px, 10px)
+
+      i
+        position: absolute
+        top: 0
+        left: 0
+        right: 100%
+        bottom: 0
+        display: flex
+        align-items: center
+        @include ml-mr(15px, 0)
+        color: $color-black

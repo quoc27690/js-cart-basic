@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+  </head>
+  <body>
+    <header>
+      <div class="header__top-menu">
+        <div class="header__top-menu--relative">
+          <div class="wrapper">
+            <div class="header__top-menu__left"><i class="fa fa-bars"></i>
+              <ul>
+                <li><a href="./address.html">Tài khoản của tôi</a></li>
+                <li><a href="./order.html">Trạng thái đơn hàng</a></li>
+                <li><a onclick="document.getElementById('modal').style.display='block'">Danh sách ưa thích</a></li>
+                <li><a href="./cart.html">Giỏ hàng<span>0</span></a></li>
+                <li><a href="./login.html">Đặng nhập</a></li>
+                <li><a href="./register.html">Đăng ký</a></li>
+              </ul>
+              <div id="modal">
+                <div class="modal">
+                  <div class="modal__content"><img src="./assets/images/modal.png"><i class="fa fa-times" onclick="document.getElementById('modal').style.display='none'"></i>
+                    <div class="modal__content__text">
+                      <p>Gửi Email</p>
+                      <p>Đăng ký Email ngay hôm nay để nhận được thông tin về các sự kiện, các chương trình giảm giá của chúng tôi sớm nhất!</p>
+                      <form>
+                        <input>
+                        <button>GỬI EMAIL</button>
+                      </form>
+                      <div class="input-checkbox">
+                        <input type="checkbox" id="Không hiển thị lại thông báo này" value=""/>
+                        <label for="Không hiển thị lại thông báo này">Không hiển thị lại thông báo này</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header__top-menu__right">
+              <form>
+                <input placeholder="Tìm kiếm ở đây ...">
+                <button><i class="fa fa-search"></i></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__main-menu">
+        <div class="wrapper">
+          <div class="header__main-menu__logo"><img src="./assets/images/header-main-menu-logo.png"></div>
+          <div class="header__main-menu__list"><i class="fa fa-bars header__list__icon"></i>
+            <ul class="header__list__menu">
+              <li> <a class="header__list__item" href="./index.html">Trang chủ</a></li>
+              <li> <a class="header__list__item" href="./detail.html">Rượu vang đỏ</a>
+                <div class="header__list__sub">
+                  <div class="header__sub__title">
+                    <p>Rượu ngoại</p>
+                    <ul class="header__sub__item">
+                      <li><a href="#">Rượu Chivas</a></li>
+                      <li><a href="#">Hàng độc - Rượu độc đáo</a></li>
+                      <li><a href="#">Johnnie Walker</a></li>
+                      <li><a href="#">Rượu Whisky</a></li>
+                      <li><a href="#">Rượu Remy Martin</a></li>
+                      <li><a href="#">Rượu Glenmorangie</a></li>
+                    </ul>
+                  </div>
+                  <div class="header__sub__title">
+                    <p>Rượu vang</p>
+                    <ul class="header__sub__item">
+                      <li><a href="#">Rượu Chivas</a></li>
+                      <li><a href="#">Hàng độc - Rượu độc đáo</a></li>
+                      <li><a href="#">Johnnie Walker</a></li>
+                      <li><a href="#">Rượu Whisky</a></li>
+                      <li><a href="#">Rượu Remy Martin</a></li>
+                      <li><a href="#">Rượu Glenmorangie</a></li>
+                    </ul>
+                  </div>
+                  <div class="header__sub__title">
+                    <p>Rượu ngoại</p>
+                    <ul class="header__sub__item">
+                      <li><a href="#">Rượu Chivas</a></li>
+                      <li><a href="#">Hàng độc - Rượu độc đáo</a></li>
+                      <li><a href="#">Johnnie Walker</a></li>
+                      <li><a href="#">Rượu Whisky</a></li>
+                      <li><a href="#">Rượu Remy Martin</a></li>
+                      <li><a href="#">Rượu Glenmorangie</a></li>
+                    </ul>
+                  </div>
+                  <div class="header__sub__image"><img src="./assets/images/header-main-menu-sub.png"></div>
+                  <div class="header__sub__triangle"></div>
+                </div>
+              </li>
+              <li> <a class="header__list__item" href="./products-grid.html">Rượu vang trắng</a></li>
+              <li> <a class="header__list__item" href="./error.html">Champagne</a></li>
+              <li> <a class="header__list__item" href="./introduce.html">Thông tin</a></li>
+              <li> <a class="header__list__item" href="./blog.html">Blog</a></li>
+              <li> <a class="header__list__item" href="./contact.html">Liên hệ</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="blog">
+      <div class="link">
+        <div class="wrapper">
+          <ul>
+            <li><a href="./index.html">Trang chủ</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="blog__title">
+        <div class="wrapper">
+          <div class="title-product">
+            <p>BLOG</p><img src="./assets/images/arrow.png"/>
+          </div>
+        </div>
+      </div>
+      <div class="blog__list">
+        <div class="wrapper">
+          <div class="blog__list__container">
+            <div class="blog-item">
+              <div class="blog-item__image"><img src="./assets/images/blog-1.png"/>
+                <div class="blog-item__image__hover">
+                  <div class="blog-item__hover__bg"></div>
+                  <div class="blog-item__hover__icon"><i class="fa fa-link"></i></div><a href="./blog-detail.html"></a>
+                </div>
+              </div>
+              <div class="blog-item__title"><a href="./blog-detail.html">Vang Thăng Long Classic</a></div>
+              <div class="blog-item__time">
+                <p>Đăng bởi Giangle | 30/06/2015 | 60 bình luận</p>
+              </div>
+              <div class="blog-item__content">
+                <p>Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long tạo cảm giác hương phấn, êm dịu, vui tươi, sản phẩm được đóng chai dung tích 750ml...</p>
+              </div>
+              <div class="blog-item__read-more"><a href="./blog-detail.html">Read more</a></div>
+            </div>
+            <div class="blog-item">
+              <div class="blog-item__image"><img src="./assets/images/blog-2.png"/>
+                <div class="blog-item__image__hover">
+                  <div class="blog-item__hover__bg"></div>
+                  <div class="blog-item__hover__icon"><i class="fa fa-link"></i></div><a href="./blog-detail.html"></a>
+                </div>
+              </div>
+              <div class="blog-item__title"><a href="./blog-detail.html">Vang Thăng Long Classic</a></div>
+              <div class="blog-item__time">
+                <p>Đăng bởi Giangle | 30/06/2015 | 60 bình luận</p>
+              </div>
+              <div class="blog-item__content">
+                <p>Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long ...</p>
+              </div>
+              <div class="blog-item__read-more"><a href="./blog-detail.html">Read more</a></div>
+            </div>
+            <div class="blog-item">
+              <div class="blog-item__image"><img src="./assets/images/blog-1.png"/>
+                <div class="blog-item__image__hover">
+                  <div class="blog-item__hover__bg"></div>
+                  <div class="blog-item__hover__icon"><i class="fa fa-link"></i></div><a href="./blog-detail.html"></a>
+                </div>
+              </div>
+              <div class="blog-item__title"><a href="./blog-detail.html">Vang Thăng Long Classic</a></div>
+              <div class="blog-item__time">
+                <p>Đăng bởi Giangle | 30/06/2015 | 60 bình luận</p>
+              </div>
+              <div class="blog-item__content">
+                <p>Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long tạo cảm giác hương phấn, êm dịu, vui tươi, sản phẩm được đóng chai dung tích 750ml...</p>
+              </div>
+              <div class="blog-item__read-more"><a href="./blog-detail.html">Read more</a></div>
+            </div>
+            <div class="blog-item">
+              <div class="blog-item__image"><img src="./assets/images/blog-1.png"/>
+                <div class="blog-item__image__hover">
+                  <div class="blog-item__hover__bg"></div>
+                  <div class="blog-item__hover__icon"><i class="fa fa-link"></i></div><a href="./blog-detail.html"></a>
+                </div>
+              </div>
+              <div class="blog-item__title"><a href="./blog-detail.html">Vang Thăng Long Classic</a></div>
+              <div class="blog-item__time">
+                <p>Đăng bởi Giangle | 30/06/2015 | 60 bình luận</p>
+              </div>
+              <div class="blog-item__content">
+                <p>Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long tạo cảm giác hương phấn, êm dịu, vui tươi, sản phẩm được đóng chai dung tích 750ml...</p>
+              </div>
+              <div class="blog-item__read-more"><a href="./blog-detail.html">Read more</a></div>
+            </div>
+            <div class="blog-item">
+              <div class="blog-item__image"><img src="./assets/images/blog-2.png"/>
+                <div class="blog-item__image__hover">
+                  <div class="blog-item__hover__bg"></div>
+                  <div class="blog-item__hover__icon"><i class="fa fa-link"></i></div><a href="./blog-detail.html"></a>
+                </div>
+              </div>
+              <div class="blog-item__title"><a href="./blog-detail.html">Vang Thăng Long Classic</a></div>
+              <div class="blog-item__time">
+                <p>Đăng bởi Giangle | 30/06/2015 | 60 bình luận</p>
+              </div>
+              <div class="blog-item__content">
+                <p>Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long ...</p>
+              </div>
+              <div class="blog-item__read-more"><a href="./blog-detail.html">Read more</a></div>
+            </div>
+            <div class="blog-item">
+              <div class="blog-item__image"><img src="./assets/images/blog-1.png"/>
+                <div class="blog-item__image__hover">
+                  <div class="blog-item__hover__bg"></div>
+                  <div class="blog-item__hover__icon"><i class="fa fa-link"></i></div><a href="./blog-detail.html"></a>
+                </div>
+              </div>
+              <div class="blog-item__title"><a href="./blog-detail.html">Vang Thăng Long Classic</a></div>
+              <div class="blog-item__time">
+                <p>Đăng bởi Giangle | 30/06/2015 | 60 bình luận</p>
+              </div>
+              <div class="blog-item__content">
+                <p>Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long tạo cảm giác hương phấn, êm dịu, vui tươi, sản phẩm được đóng chai dung tích 750ml...</p>
+              </div>
+              <div class="blog-item__read-more"><a href="./blog-detail.html">Read more</a></div>
+            </div>
+            <div class="blog-item">
+              <div class="blog-item__image"><img src="./assets/images/blog-1.png"/>
+                <div class="blog-item__image__hover">
+                  <div class="blog-item__hover__bg"></div>
+                  <div class="blog-item__hover__icon"><i class="fa fa-link"></i></div><a href="./blog-detail.html"></a>
+                </div>
+              </div>
+              <div class="blog-item__title"><a href="./blog-detail.html">Vang Thăng Long Classic</a></div>
+              <div class="blog-item__time">
+                <p>Đăng bởi Giangle | 30/06/2015 | 60 bình luận</p>
+              </div>
+              <div class="blog-item__content">
+                <p>Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long tạo cảm giác hương phấn, êm dịu, vui tươi, sản phẩm được đóng chai dung tích 750ml...</p>
+              </div>
+              <div class="blog-item__read-more"><a href="./blog-detail.html">Read more</a></div>
+            </div>
+            <div class="blog-item">
+              <div class="blog-item__image"><img src="./assets/images/blog-2.png"/>
+                <div class="blog-item__image__hover">
+                  <div class="blog-item__hover__bg"></div>
+                  <div class="blog-item__hover__icon"><i class="fa fa-link"></i></div><a href="./blog-detail.html"></a>
+                </div>
+              </div>
+              <div class="blog-item__title"><a href="./blog-detail.html">Vang Thăng Long Classic</a></div>
+              <div class="blog-item__time">
+                <p>Đăng bởi Giangle | 30/06/2015 | 60 bình luận</p>
+              </div>
+              <div class="blog-item__content">
+                <p>Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long ...</p>
+              </div>
+              <div class="blog-item__read-more"><a href="./blog-detail.html">Read more</a></div>
+            </div>
+            <div class="blog-item">
+              <div class="blog-item__image"><img src="./assets/images/blog-1.png"/>
+                <div class="blog-item__image__hover">
+                  <div class="blog-item__hover__bg"></div>
+                  <div class="blog-item__hover__icon"><i class="fa fa-link"></i></div><a href="./blog-detail.html"></a>
+                </div>
+              </div>
+              <div class="blog-item__title"><a href="./blog-detail.html">Vang Thăng Long Classic</a></div>
+              <div class="blog-item__time">
+                <p>Đăng bởi Giangle | 30/06/2015 | 60 bình luận</p>
+              </div>
+              <div class="blog-item__content">
+                <p>Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long tạo cảm giác hương phấn, êm dịu, vui tươi, sản phẩm được đóng chai dung tích 750ml...</p>
+              </div>
+              <div class="blog-item__read-more"><a href="./blog-detail.html">Read more</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer__top"><img src="./assets/images/footer-top-brand.png"></div>
+      <div class="footer__middle">
+        <div class="wrapper">
+          <div class="footer__middle__info">
+            <p>Thông tin</p>
+            <ul>
+              <li><a href="#">Về chúng tôi</a></li>
+              <li><a href="#">Giao hàng</a></li>
+              <li><a href="#">Cảm nghĩ</a></li>
+              <li><a href="#">Lưu trữ</a></li>
+              <li><a href="#">Chính sách riêng tư</a></li>
+            </ul>
+          </div>
+          <div class="footer__middle__buy">
+            <p>Mua hàng</p>
+            <ul>
+              <li><a href="#">Vận chuyển và trả hàng</a></li>
+              <li><a href="#">Mua hàng an toàn</a></li>
+              <li><a href="#">Vận quốc tế</a></li>
+              <li><a href="#">Liên kết</a></li>
+              <li><a href="#">Dịch vụ giảm giá</a></li>
+            </ul>
+          </div>
+          <div class="footer__middle__email">
+            <p>Gửi email</p>
+            <p>Gửi email cho chúng tôi để được hỗ trợ</p>
+            <form>
+              <input placeholder="Enter your email">
+              <div class="footer__email__submit">
+                <button class="footer__email__submit--button">GỬI</button>
+                <div class="footer__email__submit--triangle"></div>
+              </div>
+            </form>
+            <div class="footer__email__social">
+              <ul>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa fa-rss"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__middle__contact">
+            <p>Liên hệ</p>
+            <ul>
+              <li><i class="fa fa-map-marker"></i><a href="#">Tầng 4, Tòa nhà Hanoi Group Số 442 Đội Cấn, P.Cống Vị, Q. Ba Đình, Hà Nội</a></li>
+              <li><i class="fa fa-phone"></i><a href="#">(04) 6674 2332</a></li>
+              <li><i class="fa fa-phone"></i><a href="#">(04) 3786 8904</a></li>
+              <li><i class="fa fa-phone"></i><a href="#">(08) 6680 9686</a></li>
+              <li><i class="fa fa-envelope"></i><a href="#">Support@bizweb.vn</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="footer__bottom">
+        <div class="wrapper">
+          <div class="footer__bottom__left">
+            <p>© Copyright 2008-2014 DKT Technology JSC</p>
+          </div>
+          <div class="footer__bottom__right"><img src="./assets/images/footer-bottom-card.png"></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

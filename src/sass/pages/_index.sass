@@ -21,7 +21,7 @@
 
           p 
             color: $color-primary
-            font-size: $font-size-intro-content
+            font-size: $font-size-index-intro-content
         
         .index__intro__more
           @include mt-mb(35px, 0)
@@ -68,11 +68,27 @@
                 @include mt-mb(25px, 0)
 
                 p
-                  font-size: $font-size-sale-content
+                  font-size: $font-size-index-sale-content
 
               .index__detail__time
                 @include grid(2, 0)
                 @include mt-mb(55px, 0)
+
+                .index__time__box
+                  border: 0.5px solid $color-hover
+                  text-align: center
+
+                  p
+                    color: $color-hover
+
+                    &:first-child
+                      @include pt-pb(10px, 0)
+                      font-family: utm-caviar
+                      font-size: $font-size-index-time-box-num
+                    
+                    &:last-child
+                      @include pt-pb(5px, 15px)
+                      font-size: $font-size-index-time-box-text
 
   &__new-products
     @include mt-mb(970px, 0)
@@ -103,6 +119,9 @@
               width: 200%
               transform: translateX(0%)
               @include transition
+
+              .product
+                @extend %product-slide
               
           #index-new-products-1:checked ~ .index__slide__full-images--hidden .index__slide__full-images
             transform: translateX(0%)
@@ -179,7 +198,7 @@
             font-size: $font-size-primary
 
           &:last-of-type
-            @include mt-mb(30px, 0)
+            @include mt-mb(20px, 0)
             font-size: $font-size-index-images
 
             &::before
@@ -235,6 +254,9 @@
               width: 200%
               transform: translateX(0%)
               @include transition
+
+              .product
+                @extend %product-slide
               
           #index-selling-products-1:checked ~ .index__slide__full-images--hidden .index__slide__full-images
             transform: translateX(0%)
@@ -278,7 +300,7 @@
             @include grid(12, 30px)
             @include mt-mb(45px, 0)
 
-            .blog__item
+            .blog-item
               &:first-child
                 grid-column: 1/7
 

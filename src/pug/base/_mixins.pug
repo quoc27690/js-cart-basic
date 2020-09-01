@@ -3,26 +3,41 @@ mixin title-main(text)
     p= text
     img(src='./assets/images/title.png')
 
-mixin title-product(text)
+mixin title-product(text, arrow)
   .title-product
     p= text
-    img(src='./assets/images/arrow.png')
+    if arrow != undefine
+      img(src='./assets/images/arrow.png')
+
+mixin title-product-small(text, arrow)
+  .title-product-small
+    p= text
+    if arrow != undefine
+      img(src='./assets/images/arrow.png')
 
 mixin price-product(num)
   .price-product
     p= num
       sup đ
 
-mixin button-more(text)
-  .button-more
+mixin button-small(text)
+  .button-small
+    button(id=text)= text
+
+mixin button-big(text)
+  .button-big
+    button= text
+
+mixin button-address(text)
+  .button-address
     button= text
 
 mixin button-add-to-cart
   .button-add-to-cart
     button ADD TO CART
 
-mixin time-box(num, text)
-  .time-box
+mixin index-time-box(num, text)
+  .index__time__box
     p= num
     p= text
 
@@ -54,41 +69,199 @@ mixin product(link, title, price, old, text)
     if text !== ''
       +corner-small(text)(style!=attributes.style)
     .product__compare
-      a(href='#')
+      a(href='./error.html')
         i.fa.fa-heart
         p Yêu thích
-      a(href='#')
+      a(href='./error.html')
         i.fa.fa-signal
         p So sánh
-      a(href='#')
+      a(href='./error.html')
         i.fa.fa-compress
-    
+
+mixin product-list(link, title, price, content)
+  .product-list
+    .product-list__left
+      img(src=link)
+    .product-list__right
+      +title-product(title)
+      +price-product(price)
+      p= content
+      .product-list__right__add
+        +button-add-to-cart
+        a(href='./error.html')
+          i.fa.fa-heart
+          p Yêu thích
+        a(href='./error.html')
+          i.fa.fa-signal
+          p So sánh
+
 mixin index-images-item(link)
   .index__images__item
     img(src=link)
     .index__item__hover
       p 1987
       p RƯỢU
-      a(href='#')
+      a(href='./error.html')
 
-mixin blog-item(link, text1, text2, text3)
-  .blog__item
-    .blog__item__image
+mixin blog-item(link, text1, text2, text3, readMore)
+  .blog-item
+    .blog-item__image
       img(src=link)
-      .blog__image__hover
-        .blog__hover__bg
-        .blog__hover__icon
-            i.fa.fa-link
-        a(href='#')
-    .blog__item__title
-      a(href='#')= text1
-    .blog__item__time
+      .blog-item__image__hover
+        .blog-item__hover__bg
+        .blog-item__hover__icon
+          i.fa.fa-link
+        a(href='./blog-detail.html')
+    .blog-item__title
+      a(href='./blog-detail.html')= text1
+    .blog-item__time
       p= text2
-    .blog__item__content
+    .blog-item__content
       p= text3
-    .blog__item__read-more
-      a(href='#') Read more
+    if readMore == undefine
+      .blog-item__read-more
+        a(href='./blog-detail.html') Read more
 
-mixin detail-text-title(text)
-  .detail-text-title
+mixin detail-title(text)
+  .detail-title
     p= text
+
+mixin link(pageLink)
+  .link
+    .wrapper
+      ul
+        each item in pageLink
+          li
+            a(href=item.link)= item.name
+
+mixin products-link
+  +link(detailLink)
+
+mixin cart-link
+  +link(cartLink)
+
+mixin blog-link
+  +link(blogLink)
+
+mixin intro-link
+  +link(introLink)
+
+mixin login-link
+  +link(introLink)
+
+mixin register-link
+  +link(registerLink)
+
+mixin order-link
+  +link(orderLink)
+
+mixin address-link
+  +link(addressLink)
+
+mixin contact-link
+  +link(contactLink)
+
+mixin products-banner
+  .products__banner
+    .wrapper
+      img(src='./assets/images/products-banner.png')
+
+mixin products-content
+  .products__content
+    .wrapper
+      .products__content__container
+        .products__content__left
+          .products__left__list
+            +title-product-small('DANH MỤC SẢN PHẨM', true)
+            ul
+              each item in productsContentLeftList
+                li 
+                  a(href='./error.html')= item
+          .products__left__compare
+            +title-product-small('SO SÁNH SẢN PHẨM', true)
+            p Bạn chưa có sản phẩm nào để so sánh
+          .products__left__tag
+            +title-product-small('TAG SẢN PHẨM', true)
+            ul
+              each item in productsContentLeftTag
+                li 
+                  button= item
+          .products__left__banner
+            img(src='./assets/images/products-content-left-banner.png')
+        .products__content__right
+          .products__right__pag
+            .products__pag__left
+              block products-pag-left
+                a.active(href='./products-grid.html')
+                  i.fa.fa-th
+                a(href='./products-list.html')
+                  i.fa.fa-th-list
+            .products__pag__right
+              a(href='./error.html')
+                i.fa.fa-caret-left
+              - for (var i = 1; i < 6; i++)
+                if i == 2
+                  a.active(href="./error.html")= i
+                else
+                  a(href="./error.html")= i
+              a(href='./error.html')
+                i.fa.fa-caret-right
+          block products-right-items
+
+mixin blog-detail-left-title(title)
+  .blog-detail__left__title
+    p= title
+
+mixin blog-detail-newest-item(img, title, time)
+  .blog-detail__newest__item
+    .blog-detail__item__left
+      img(src=img)
+    .blog-detail__item__right
+      p= title
+      i.fa.fa-calendar-o
+      span= time
+
+mixin input-text(text, asterisk, value)
+  .input-text(class!=attributes.class)
+    label(for=text)= text
+      if asterisk == true
+        span *
+    input(type='text' id=text value=value)
+
+mixin input-checkbox(text, value)
+  .input-checkbox
+    input(type='checkbox' id=text value=value)
+    label(for=text)= text
+
+mixin textarea-text(text, asterisk)
+  .textarea-text
+    label(for=text)= text
+      if asterisk == true
+        span *
+    textarea(id=text)
+
+mixin comment(text1, text2, text3)
+  .comment
+    .comment__title
+      .comment__title__left
+        p= text1
+        p= text2
+      .comment__title__right
+        p Trả lời
+    .comment__content
+      p= text3
+    
+mixin address-1
+  .address-1
+    each item in address
+      +input-text(item.name, false, item.value)
+    +input-checkbox('Đặt làm địa chỉ mặc định', "")
+    .address-1__btn
+      +button-address('Chỉnh sửa địa chỉ')
+      +button-address('Xóa')
+
+mixin address-2
+  .address-2
+    each item in address
+      +input-text(item.name, false, item.value)
+    a(href='./error.html') Chỉnh sửa địa chỉ

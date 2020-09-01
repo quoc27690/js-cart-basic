@@ -1,0 +1,35 @@
+extends ../layouts/default-layout
+
+block title
+  title Liên Hệ
+
+block container
+  .contact
+    +contact-link
+    .contact__title
+      .wrapper
+        +title-product('LIÊN HỆ', true)
+    .contact__content
+      .wrapper
+        .contact__content__container
+          .contact__content__left
+            iframe(width='100%', height='400', src='https://maps.google.com/maps?q=Chelsea%20Bridge&t=&z=15&ie=UTF8&iwloc=&output=embed', frameborder='0', scrolling='no', marginheight='0', marginwidth='0')
+            +input-text('Your Name', false, "")
+            +input-text('Your Email', false, "")
+            +input-text('Subject', false, "")
+            +textarea-text('Your Message', false)
+            +button-small('GỨI')
+          .contact__content__right
+            img(src='./assets/images/header-main-menu-logo.png')
+            ul
+              each item in contactInfo
+                li
+                  i(class=item.class)
+                  p= item.content
+            p FOLLOW US:
+            .contact__content__social
+              ul
+                each item in contactSocial
+                  li
+                    a(href='#')
+                      i(class=item)

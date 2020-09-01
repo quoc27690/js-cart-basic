@@ -1,0 +1,40 @@
+extends ../layouts/default-layout
+
+block title
+  title Giỏ Hàng
+
+block script
+  script(src='./js/cart.js')
+
+block container
+  .cart
+    +cart-link
+    .cart__title
+      .wrapper
+        +title-product('GIỎ HÀNG', true)
+    .cart__list
+      .wrapper
+        table
+          tr
+            each item in cartMenu
+              th= item
+          each item in cartList
+            tr.cartItem
+              td
+                img(src=item.img)
+              td= item.name
+              td
+                p= item.price
+                  sup đ
+              td= item.quantity
+              td
+                p= item.sum
+                  sup đ
+              td
+                i(class=item.delete)
+    .cart__btn
+      .wrapper
+        .cart__btn__container
+          +button-small('TIẾP TỤC MUA HÀNG')
+          +button-small('XÓA')
+          +button-small('THANH TOÁN')

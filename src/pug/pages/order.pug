@@ -1,0 +1,47 @@
+extends ../layouts/default-layout
+
+block title
+  title Trạng Thái Đơn Hàng
+
+block container
+  .order
+    +order-link
+    .order__title
+      .wrapper
+        +title-product('ĐƠN HÀNG', true)
+    .order__content
+      .wrapper
+        .order__content__container
+          .order__content__left
+            .order__left__title
+              p DANH SÁCH ĐƠN HÀNG
+              ul
+                each item in orderTitle
+                  li
+                    a(href='#')= item
+            .order__left__table
+              table
+                tr
+                  each item in orderMenu
+                    th= item
+                each item in orderList
+                  tr
+                    td= item.num
+                    td
+                      p= item.name
+                      p= item.time
+                    td= item.store
+                    td= item.quantity
+                    td
+                      p= item.sum
+                    td= item.status
+                    td= item.action
+          .order__content__right
+            .order__right__title
+              p THÔNG TIN KHÁCH HÀNG
+            ul
+              each item in orderInfo
+                li 
+                  i(class=item.class)
+                  p= item.content 
+            p Chi tiết địa chỉ

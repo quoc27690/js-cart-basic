@@ -11,57 +11,63 @@
 
 .title-product
   p 
-    @include mt-mb(0, 5px)
     color: initial
     font-size: $font-size-title-product
+  
+  img 
+    @include mt-mb(5px, 0)
+
+.title-product-small
+  p 
+    color: initial
+    font-size: $font-size-title-product-small
+    letter-spacing: 3px
+
+  img 
+    @include mt-mb(8px, 0)
 
 .price-product
   p
     color: $color-hover
     font-family: utm-caviar
-    font-size: $font-size-sale-price
+    font-size: $font-size-price-product
 
-.button-more
+.button-small
   button
-    width: 115px
-    height: 31px
-    background-color: $color-black
-    color: $color-white
-    font-family: "Times New Roman"
-    font-size: $font-size-primary
-    letter-spacing: 2px
+    height: 29px
+    @include pl-pr(18px, 18px)
+    @extend %button-small
 
     &:hover
       background-color: $color-hover
+
+.button-big
+  button
+    height: 45px
+    @include pl-pr(45px, 45px)
+    @extend %button-big
+
+    &:hover
+      background-color: $color-hover
+
+.button-address
+  button
+    height: 37px
+    @include pl-pr(18px, 18px)
+    @extend %button-address
+
+    &:hover
+      background-color: $color-hover !important 
 
 .button-add-to-cart
   button
     width: 122px
     height: 29px
-    background-color: $color-black
-    color: $color-white
-    font-family: "Times New Roman"
-    font-size: $font-size-primary
     letter-spacing: 1px
+    @extend %button-small
 
     &:hover
       background-color: $color-hover
-
-.time-box
-  border: 0.5px solid $color-hover
-  text-align: center
-
-  p
-    color: $color-hover
-
-    &:first-child
-      @include pt-pb(10px, 0)
-      font-family: utm-caviar
-      font-size: $font-size-time-box-num
-    
-    &:last-child
-      @include pt-pb(5px, 15px)
-      font-size: $font-size-time-box-text
 
 .corner-big  
   .corner
@@ -76,7 +82,7 @@
     p 
       @include pt-pb(125px, 0)
       color: $color-white
-      font-size: $font-size-corner-big
+      font-size: $font-size-index-corner-big
 
   .underline
     position: absolute
@@ -100,7 +106,7 @@
     p 
       @include pt-pb(60px, 0)
       color: $color-white
-      font-size: $font-size-corner-small
+      font-size: $font-size-index-corner-small
 
   .underline
     position: absolute
@@ -113,30 +119,13 @@
 
 .product
   position: relative
-  overflow: hidden
-  flex: 1
-  display: flex
-  flex-direction: column
-  justify-content: flex-end
-
-  &:first-child, &:nth-child(5)
-    @include ml-mr(0, 15px)
-
-  &:nth-child(4), &:last-child
-    @include ml-mr(15px, 0)
-
-  &:not(:first-child, &:nth-child(4), &:nth-child(5), &:last-child)
-    @include ml-mr(15px, 15px)
-    
-  .product__title
-    @include mt-mb(20px, 0)
   
   &__image
     img 
       width: 100%
 
   &__title
-    @include mt-mb(40px, 0)
+    @include mt-mb(20px, 0)
 
     p 
       color: $color-black
@@ -179,7 +168,7 @@
       display: flex
       @include pt-pb(8px, 8px)
       color: $color-primary
-      font-size: $font-size-compare
+      font-size: $font-size-product-compare
       @include transition
 
       &:first-child
@@ -200,8 +189,49 @@
     .product__compare
       visibility: visible
       opacity: 1
-    
-.blog__item
+
+.product-list
+  @include grid(9, 30px)
+  
+  .product-list__left
+    grid-column: 1/4
+    text-align: center
+
+    img
+      @include mt-mb(25px, 10px)
+      height: 290px
+
+  .product-list__right
+    grid-column: 4/9
+    @include ml-mr(0, 50px)
+
+    .title-product
+      @include mt-mb(5px, 0)
+      
+    & > p
+      @include mt-mb(15px, 0)
+      font-size: $font-size-products-list-right-content
+
+    .product-list__right__add
+      display: flex
+      @include mt-mb(27px, 0)
+
+      .button-add-to-cart
+        @include ml-mr(0, 35px)
+
+      & > a
+        display: flex
+        align-items: center
+        @include ml-mr(0, 32px)
+        
+        i, p
+          color: $color-primary
+          font-size: $font-size-products-list-right-add
+
+        i
+          @include ml-mr(0, 9px)
+          
+.blog-item
   &__image
     position: relative
 
@@ -209,13 +239,13 @@
       width: 100%
 
     &:hover
-      .blog__image__hover
-        .blog__hover__bg, .blog__hover__icon i
+      .blog-item__image__hover
+        .blog-item__hover__bg, .blog-item__hover__icon i
           visibility: visible
           opacity: 1
 
-    .blog__image__hover
-      .blog__hover__bg
+    .blog-item__image__hover
+      .blog-item__hover__bg
         position: absolute
         top: 0
         left: 0
@@ -226,7 +256,7 @@
         background: linear-gradient(to bottom right, transparent 50%, $color-blog-hover 50% )
         @include transition
 
-      .blog__hover__icon
+      .blog-item__hover__icon
         i
           position: absolute
           top: 50%
@@ -282,7 +312,177 @@
       opacity: 0.5
       @include transition
 
-.detail-text-title
+.detail-title
   p
     color: $color-primary
-    font-size: $font-size-detail-text-title
+    font-size: $font-size-detail-title
+
+.link
+  @include mt-mb(30px, 0)
+
+  .wrapper
+    ul
+      display: flex
+
+      li
+        float: none
+
+        &:not(:last-child)
+          &::after
+            content: '/'
+            @include ml-mr(4px, 4px)
+
+        a 
+          color: $color-primary
+          font-size: $font-size-detail-link      
+
+.products__banner
+  @include mt-mb(35px, 0)
+
+  .wrapper
+    img 
+      width: 100%
+  
+.products__content
+  @include mt-mb(42px, 0)
+  
+  .wrapper
+    .products__content__container
+      @include grid(12, 30px)
+      
+      .products__content__left
+        grid-column: 1/4
+        
+        .products__left__list
+          ul
+            @include mt-mb(22px, 0)
+            
+            li
+              float: none
+              @include mt-mb(5px, 0)
+              
+              &:hover
+                @include ml-mr(12px, 0)
+                color: $color-hover
+                list-style-type: disc
+
+              a
+                color: $color-primary
+                font-size: $font-size-products-content-left-list
+
+        .products__left__compare
+          @include mt-mb(40px, 0)
+
+          p 
+            @include mt-mb(30px, 0)
+            font-size: $font-size-products-content-left-list
+          
+        .products__left__tag
+          @include mt-mb(40px, 0)
+
+          ul
+            display: flex
+            flex-wrap: wrap
+            @include mt-mb(24px, 0)
+
+            li 
+              float: none
+              @include ml-mr(0, 8px)
+              @include mt-mb(0, 11px)
+              
+              button
+                @include pt-pb(4px, 4px)
+                @include pl-pr(8px, 8px)
+                border: 1px solid $color-border
+                background-color: transparent
+                color: $color-primary
+                font-family: "Open Sans"
+                font-size: $font-size-primary
+
+                &:hover
+                  background-color: $color-hover
+                  color: $color-white
+                 
+        .products__left__banner
+          position: relative
+          display: none
+          @include xl
+            display: block
+          overflow: hidden
+          height: 538px
+          @include mt-mb(40px, 130px)
+          
+          img
+            position: absolute
+            left: -25%
+
+      .products__content__right
+        grid-column: 4/13
+
+        .products__right__pag
+          display: flex
+          justify-content: space-between
+          align-items: center
+          @include pl-pr(13px, 13px)
+          @include pt-pb(10px, 10px)
+          border: 1px solid $color-border
+
+          .products__pag__left
+            display: flex
+
+            .active
+              color: $color-hover
+   
+            a
+              display: flex
+              align-items: center
+              @include ml-mr(0, 15px)
+              color: $color-primary
+              font-size: $font-size-products-content-right-pag-left
+              @include transition
+
+          .products__pag__right
+            a
+              color: $color-primary
+              font-size: $font-size-primary
+              @include transition
+
+              &:first-child
+                @include ml-mr(0, 15px)
+
+              &:last-child
+                @include ml-mr(8px, 0)
+
+              &:not(&:first-child, &:last-child)
+                @include ml-mr(0, 7px)
+
+            .active
+              color: $color-hover
+
+.blog-detail__left__title
+  p
+    color: $color-black
+    font-family: "Roboto"
+    font-size: $font-size-blog-detail-title
+  
+.input-text, .textarea-text
+  display: flex
+
+.input-checkbox
+  input
+    position: relative
+    visibility: hidden
+
+    &::after
+      position: absolute
+      visibility: visible
+      content: ""
+      top: 25%
+      left: 0
+      width: 6px
+      height: 6px
+      border: 1px solid $color-border
+      background-color: $color-border
+
+    &:checked::after
+      background-color: $color-hover

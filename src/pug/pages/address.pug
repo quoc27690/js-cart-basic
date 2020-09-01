@@ -1,0 +1,24 @@
+extends ../layouts/default-layout
+
+block title
+  title Địa Chỉ Của Bạn
+
+block container
+  .address
+    +address-link
+    .address__title
+      .wrapper
+        +title-product('ĐỊA CHỈ', true)
+    .address__content
+      .wrapper
+        .address__content__container
+          .address__content__top
+            .address__top__left
+              p ĐỊA CHỈ CỦA BẠN
+              +address-1
+            .address__top__right
+              a(href='#') Thêm địa chỉ
+              +address-1
+          .address__content__bottom
+            +address-2
+            +address-2

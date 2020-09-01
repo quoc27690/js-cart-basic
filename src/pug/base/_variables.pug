@@ -1,8 +1,8 @@
 -
   const headerTopMenu = [
-    {name: 'Tài khoản của tôi', link: '#'}, 
-    {name: 'Trạng thái đơn hàng', link: '#'}, 
-    {name: 'Danh sách ưa thích', link: '#'}, 
+    {name: 'Tài khoản của tôi', link: './address.html'}, 
+    {name: 'Trạng thái đơn hàng', link: './order.html'}, 
+    {name: 'Danh sách ưa thích', link: './error.html'}, 
     {name: 'Giỏ hàng', link: './cart.html'}, 
     {name: 'Đặng nhập', link: './login.html'}, 
     {name: 'Đăng ký', link: './register.html'}, 
@@ -12,8 +12,8 @@
   const headerMainMenuListMenu = [
     {name: 'Trang chủ', link: './index.html'}, 
     {name: 'Rượu vang đỏ', link: './detail.html'}, 
-    {name: 'Rượu vang trắng', link: '#'}, 
-    {name: 'Champagne', link: '#'}, 
+    {name: 'Rượu vang trắng', link: './products-grid.html'}, 
+    {name: 'Champagne', link: './error.html'}, 
     {name: 'Thông tin', link: './introduce.html'}, 
     {name: 'Blog', link: './blog.html'}, 
     {name: 'Liên hệ', link: './contact.html'}, 
@@ -85,21 +85,15 @@
   ]
 
 -
-  const indexBlog = [
-    {link:'./assets/images/blog-1.png', text1:'Vang Thăng Long Classic', text2:'Đăng bởi Giangle | 30/06/2015 | 60 bình luận', text3:'Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long tạo cảm giác hương phấn, êm dịu, vui tươi, sản phẩm được đóng chai dung tích 750ml...'}, 
-    {link:'./assets/images/blog-2.png', text1:'Vang Thăng Long Classic', text2:'Đăng bởi Giangle | 30/06/2015 | 60 bình luận', text3:'Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long ...'}
-  ]
-
--
   const indexNewProduct = [
-    {link:'./assets/images/product-1.jpg', title: 'RƯỢU VANG ĐÀ LẠT', price1: '350.000', price2: '450.000', corner: 'Sale', color: '#dfa949'}, 
+    {link:'./assets/images/product-1.jpg', title: 'RƯỢU VANG ĐÀ LẠT', price1: '350.000', price2: '450.000', corner: 'Sale', color: './error.htmldfa949'}, 
     {link:'./assets/images/product-2.jpg', title: 'RƯỢU VANG ĐÀ LẠT', price1: '350.000', price2: '450.000', corner: 'Mới', color: 'green'}, 
     {link:'./assets/images/product-3.jpg', title: 'RƯỢU VANG ĐÀ LẠT', price1: '350.000', price2: '450.000', corner: 'Hot', color: 'red'}, 
     {link:'./assets/images/product-4.jpg', title: 'RƯỢU VANG ĐÀ LẠT', price1: '350.000', price2: '450.000', corner: '', color: ''}, 
     {link:'./assets/images/product-5.jpg', title: 'RƯỢU VANG ĐÀ LẠT', price1: '350.000', price2: '450.000', corner: 'Sale', color: 'red'}, 
     {link:'./assets/images/product-6.jpg', title: 'RƯỢU VANG ĐÀ LẠT', price1: '350.000', price2: '450.000', corner: '', color: ''}, 
     {link:'./assets/images/product-7.jpg', title: 'RƯỢU VANG ĐÀ LẠT', price1: '350.000', price2: '450.000', corner: 'Hot', color: 'green'}, 
-    {link:'./assets/images/product-8.jpg', title: 'RƯỢU VANG ĐÀ LẠT', price1: '350.000', price2: '450.000', corner: 'Mới', color: '#dfa949'}, 
+    {link:'./assets/images/product-8.jpg', title: 'RƯỢU VANG ĐÀ LẠT', price1: '350.000', price2: '450.000', corner: 'Mới', color: './error.htmldfa949'}, 
   ]
 
 -
@@ -125,8 +119,57 @@
 -
   const detailLink = [
     {name: 'Trang chủ', link: './index.html'}, 
-    {name: 'Sản phẩm', link: '#'}, 
+    {name: 'Sản phẩm', link: './error.html'}, 
     {name: 'Rượu vang đỏ', link: './detail.html'}, 
+  ]
+
+-
+  const cartLink = [
+    {name: 'Trang chủ', link: './index.html'}, 
+    {name: 'Sản phẩm', link: './error.html'}, 
+    {name: 'Giỏ hàng', link: './cart.html'}, 
+  ]
+
+-
+  const introLink = [
+    {name: 'Trang chủ', link: './index.html'}, 
+    {name: 'Giới thiệu', link: './introduce.html'}, 
+  ]
+
+-
+  const blogLink = [
+    {name: 'Trang chủ', link: './index.html'}, 
+    {name: 'Blog', link: './blog.html'}, 
+  ]
+
+-
+  const loginLink = [
+    {name: 'Trang chủ', link: './index.html'}, 
+    {name: 'Đăng nhập', link: './login.html'}, 
+  ]
+
+-
+  const registerLink = [
+    {name: 'Trang chủ', link: './index.html'},
+    {name: 'Đăng ký', link: './register.html'},
+  ]
+
+-
+  const orderLink = [
+    {name: 'Trang chủ', link: './index.html'},
+    {name: 'Danh sách đơn hàng', link: './order.html'},
+  ]
+
+-
+  const addressLink = [
+    {name: 'Trang chủ', link: './index.html'},
+    {name: 'Địa chỉ', link: './address.html'},
+  ]
+
+-
+  const contactLink = [
+    {name: 'Trang chủ', link: './index.html'},
+    {name: 'Liên hệ', link: './contact.html'},
   ]
 
 -
@@ -140,9 +183,9 @@
 
 -
   const detailMainRightColor = [
-    '#e6ae48', 
-    '#030102', 
-    '#9c0001', 
+    './error.htmle6ae48', 
+    './error.html030102', 
+    './error.html9c0001', 
   ]
 
 -
@@ -171,4 +214,195 @@
     './assets/images/detail-main-left-2.jpg', 
     './assets/images/detail-main-left-3.jpg', 
     './assets/images/detail-main-left-1.jpg', 
+  ]
+
+-
+  const productsContentLeftList = [
+    'RƯỢU NGOÀI', 
+    'Rượu Chivas (26)', 
+    'Hàng độc - Rượu độc đáo (36)', 
+    'Johnnie Walker (46)', 
+    'Rượu Whisky (24)', 
+    'Rượu Remy Martin (16)', 
+    'Rượu Glenmorangie  (11)', 
+    "Rượu Ballantine's (7)", 
+    'Rượu Cognac (40)', 
+    'Rượu Vodka (93)', 
+    'Rượu Macallan (19)', 
+    'Rượu Brandy (62)', 
+    'Rượu Hennessy (20)', 
+    'RượuGin - Tequila - Liqueur - Rượu mùi (36)', 
+    'Rượu Champagne (12)', 
+    'Rượu Single malt Scotch whisky (47)', 
+    'Rượu Spirits (4)', 
+    'RƯỢU VANG', 
+    'Rượu Vang Pháp (44)', 
+    'Rượu Vang Úc (34)', 
+    'Rượu Vang Mỹ (16)', 
+    'Rượu Vang ChiLe (48)', 
+    'Rượu Vang Philip (1)', 
+    'Rượu Vang Nam Phi (20)', 
+    'Rượu Vang Ý (2)'
+  ]
+
+-
+  const productsContentLeftTag = [
+    'Đồng hồ', 
+    'Túi', 
+    'Phụ Kiện', 
+    'Giày', 
+    'Sandal', 
+    'Áo sơ mi', 
+    'Nước hoa', 
+    'Trẻ em', 
+    'Thời trang nữ'
+  ]
+
+-
+  const productsContentRightGrid = [
+    {link:'./assets/images/product-1.jpg', title: 'RƯỢU VANG ĐÀ LẠT', price1: '350.000', price2: '450.000', corner: '', color: ''}, 
+    {link:'./assets/images/product-2.jpg', title: 'RƯỢU VANG ĐÀ LẠT', price1: '350.000', price2: '450.000', corner: '', color: ''}, 
+    {link:'./assets/images/product-3.jpg', title: 'RƯỢU VANG ĐÀ LẠT', price1: '350.000', price2: '450.000', corner: '', color: ''}, 
+    {link:'./assets/images/product-4.jpg', title: 'RƯỢU VANG ĐÀ LẠT', price1: '350.000', price2: '450.000', corner: '', color: ''}, 
+    {link:'./assets/images/product-5.jpg', title: 'RƯỢU VANG ĐÀ LẠT', price1: '350.000', price2: '450.000', corner: '', color: ''}, 
+    {link:'./assets/images/product-6.jpg', title: 'RƯỢU VANG ĐÀ LẠT', price1: '350.000', price2: '450.000', corner: '', color: ''}, 
+    {link:'./assets/images/product-7.jpg', title: 'RƯỢU VANG ĐÀ LẠT', price1: '350.000', price2: '450.000', corner: '', color: ''}, 
+    {link:'./assets/images/product-8.jpg', title: 'RƯỢU VANG ĐÀ LẠT', price1: '350.000', price2: '450.000', corner: '', color: ''}, 
+    {link:'./assets/images/product-1.jpg', title: 'RƯỢU VANG ĐÀ LẠT', price1: '350.000', price2: '450.000', corner: '', color: ''}, 
+  ]
+
+-
+  const productsContentRightList = [
+    {link:'./assets/images/products-content-right-list-1.png', title: 'RƯỢU NHO NĂM 1987', price: '330.000', content: 'Một hợp chất có trong rượu vang được gọi là resveratro có khả năng làm tăng tối đa tuổi thọ. Resveratro còn có khả năng ngăn chặn mật độ ôxy hoá của protein béo.'}, 
+    {link:'./assets/images/products-content-right-list-2.png', title: 'RƯỢU NHO NĂM 1987', price: '330.000', content: 'Một hợp chất có trong rượu vang được gọi là resveratro có khả năng làm tăng tối đa tuổi thọ. Resveratro còn có khả năng ngăn chặn mật độ ôxy hoá của protein béo.'}, 
+    {link:'./assets/images/products-content-right-list-2.png', title: 'RƯỢU NHO NĂM 1987', price: '330.000', content: 'Một hợp chất có trong rượu vang được gọi là resveratro có khả năng làm tăng tối đa tuổi thọ. Resveratro còn có khả năng ngăn chặn mật độ ôxy hoá của protein béo.'}, 
+    {link:'./assets/images/products-content-right-list-2.png', title: 'RƯỢU NHO NĂM 1987', price: '330.000', content: 'Một hợp chất có trong rượu vang được gọi là resveratro có khả năng làm tăng tối đa tuổi thọ. Resveratro còn có khả năng ngăn chặn mật độ ôxy hoá của protein béo.'}
+  ]
+
+-
+  const cartMenu = [
+    'ẢNH',
+    'TÊN SẢN PHẨM',
+    'GIÁ',
+    'SỐ LƯỢNG',
+    'TỔNG SỐ',
+    'XÓA'
+  ]
+
+-
+  const cartList = [
+    {img: './assets/images/cart-list-1.png', name: 'RƯỢU VANG ĐỎ', price: '345.000', quantity: '1', sum: '345.000', delete: 'fas fa-trash-alt'},
+    {img: './assets/images/cart-list-1.png', name: 'RƯỢU VANG ĐỎ', price: '345.000', quantity: '1', sum: '345.000', delete: 'fas fa-trash-alt'},
+    {img: './assets/images/cart-list-1.png', name: 'RƯỢU VANG ĐỎ', price: '345.000', quantity: '1', sum: '345.000', delete: 'fas fa-trash-alt'},
+    {img: './assets/images/cart-list-1.png', name: 'RƯỢU VANG ĐỎ', price: '345.000', quantity: '1', sum: '345.000', delete: 'fas fa-trash-alt'}
+  ]
+
+-
+  const blogList = [
+    {link:'./assets/images/blog-1.png', text1:'Vang Thăng Long Classic', text2:'Đăng bởi Giangle | 30/06/2015 | 60 bình luận', text3:'Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long tạo cảm giác hương phấn, êm dịu, vui tươi, sản phẩm được đóng chai dung tích 750ml...'}, 
+    {link:'./assets/images/blog-2.png', text1:'Vang Thăng Long Classic', text2:'Đăng bởi Giangle | 30/06/2015 | 60 bình luận', text3:'Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long ...'},
+    {link:'./assets/images/blog-1.png', text1:'Vang Thăng Long Classic', text2:'Đăng bởi Giangle | 30/06/2015 | 60 bình luận', text3:'Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long tạo cảm giác hương phấn, êm dịu, vui tươi, sản phẩm được đóng chai dung tích 750ml...'}, 
+    {link:'./assets/images/blog-1.png', text1:'Vang Thăng Long Classic', text2:'Đăng bởi Giangle | 30/06/2015 | 60 bình luận', text3:'Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long tạo cảm giác hương phấn, êm dịu, vui tươi, sản phẩm được đóng chai dung tích 750ml...'}, 
+    {link:'./assets/images/blog-2.png', text1:'Vang Thăng Long Classic', text2:'Đăng bởi Giangle | 30/06/2015 | 60 bình luận', text3:'Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long ...'},
+    {link:'./assets/images/blog-1.png', text1:'Vang Thăng Long Classic', text2:'Đăng bởi Giangle | 30/06/2015 | 60 bình luận', text3:'Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long tạo cảm giác hương phấn, êm dịu, vui tươi, sản phẩm được đóng chai dung tích 750ml...'}, 
+    {link:'./assets/images/blog-1.png', text1:'Vang Thăng Long Classic', text2:'Đăng bởi Giangle | 30/06/2015 | 60 bình luận', text3:'Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long tạo cảm giác hương phấn, êm dịu, vui tươi, sản phẩm được đóng chai dung tích 750ml...'}, 
+    {link:'./assets/images/blog-2.png', text1:'Vang Thăng Long Classic', text2:'Đăng bởi Giangle | 30/06/2015 | 60 bình luận', text3:'Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long ...'},
+    {link:'./assets/images/blog-1.png', text1:'Vang Thăng Long Classic', text2:'Đăng bởi Giangle | 30/06/2015 | 60 bình luận', text3:'Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long tạo cảm giác hương phấn, êm dịu, vui tươi, sản phẩm được đóng chai dung tích 750ml...'}, 
+  
+  ]
+
+-
+  const blogItem = [
+    {link:'./assets/images/blog-1.png', text1:'Vang Thăng Long Classic', text2:'Đăng bởi Giangle | 30/06/2015 | 60 bình luận', text3:'Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từhoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long tạo cảmgiác hương phấn, êm dịu, vui tươi, sản phẩm được đóng chai dung tích 750ml.Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long tạo cảm giác hương phấn, êm dịu, vui tươi, sản phẩm được đóng chai dung tích 750ml...'}, 
+  ]
+
+-
+  const blogDetailNewestItem = [
+    {img: './assets/images/blog-detail-content-left-1.png', title: 'Cách sắp xếp nội thất trong nhà', time: '12/06/2015'},
+    {img: './assets/images/blog-detail-content-left-2.png', title: 'Cách sắp xếp nội thất trong nhà', time: '12/06/2015'},
+    {img: './assets/images/blog-detail-content-left-3.png', title: 'Cách sắp xếp nội thất trong nhà', time: '12/06/2015'},
+  ]
+
+-
+  const comment = [
+    {text1: 'Bình luận bởi Giangle', text2: 'Cách đây 4 giờ', text3: 'Có lẽ bởi tính chất "ăn gian" vóc dáng và vô cùng thoải mái, gợi cảm mà cả 2 dạng trang phục này được áp dụng nhiều nhất trong street style tuần qua ,chọn cho mình bộ trang phục đơn sắc với thiết kế cổ yếm, ống rộng - vừa thoải mái tối đa lại không kém phần gợi cảm, kết hợp cùng đôi giày quai chữ T tôn dáng'},
+    {text1: 'Bình luận bởi Giangle', text2: 'Cách đây 4 giờ', text3: 'Có lẽ bởi tính chất "ăn gian" vóc dáng và vô cùng thoải mái, gợi cảm mà cả 2 dạng trang phục này được áp dụng nhiều nhất trong street style tuần qua ,chọn cho mình bộ trang phục đơn sắc với thiết kế cổ yếm, ống rộng - vừa thoải mái tối đa lại không kém phần gợi cảm, kết hợp cùng đôi giày quai chữ T tôn dáng'},
+    {text1: 'Bình luận bởi Giangle', text2: 'Cách đây 4 giờ', text3: 'Có lẽ bởi tính chất "ăn gian" vóc dáng và vô cùng thoải mái, gợi cảm mà cả 2 dạng trang phục này được áp dụng nhiều nhất trong street style tuần qua ,chọn cho mình bộ trang phục đơn sắc với thiết kế cổ yếm, ống rộng - vừa thoải mái tối đa lại không kém phần gợi cảm, kết hợp cùng đôi giày quai chữ T tôn dáng'},
+  ]
+
+-
+  const commentPage = [
+    '<',
+    '1',
+    '2',
+    '3',
+    '>'
+  ]
+  
+-
+  const orderTitle = [
+    'Trạng thái tất cả (16)',
+    'Đã hủy (10)',
+    'Chưa duyệt (0)',
+    'Đã duyệt (0)',
+    'Đã thanh toán-chờ mua hàng (0)',
+    'Đã mua hàng (0)',
+    'Hàng đã về-chờ giao hàng (0)',
+    'Đã kết thúc (6)',
+  ]
+
+-
+  const orderMenu = [
+    'STT',
+    'MÃ HÓA ĐƠN/NGÀY MUA HÀNG',
+    'KHO NHẬN HÀNG',
+    'SỐ SP',
+    'TỔNG TIỀN',
+    'TÌNH TRẠNG',
+    'THAO TÁC',
+  ]
+
+-
+  const orderList = [
+    {num: '01', name: 'LEANHGIANG89 - 17/06/2015', time: '01:36 14/03/2015', store: 'HÀ ĐÔNG', quantity: '7', sum: '350.000đ', status: 'Đã thanh toán', action: 'Chi tiết'},
+    {num: '02', name: 'LEANHGIANG89 - 17/06/2015', time: '01:36 14/03/2015', store: 'HÀ ĐÔNG', quantity: '7', sum: '350.000đ', status: 'Đã thanh toán', action: 'Chi tiết'},
+    {num: '03', name: 'LEANHGIANG89 - 17/06/2015', time: '01:36 14/03/2015', store: 'HÀ ĐÔNG', quantity: '7', sum: '350.000đ', status: 'Đã thanh toán', action: 'Chi tiết'},
+    {num: '04', name: 'LEANHGIANG89 - 17/06/2015', time: '01:36 14/03/2015', store: 'HÀ ĐÔNG', quantity: '7', sum: '350.000đ', status: 'Đã thanh toán', action: 'Chi tiết'},
+    {num: '05', name: 'LEANHGIANG89 - 17/06/2015', time: '01:36 14/03/2015', store: 'HÀ ĐÔNG', quantity: '7', sum: '350.000đ', status: 'Đã thanh toán', action: 'Chi tiết'},
+    {num: '06', name: 'LEANHGIANG89 - 17/06/2015', time: '01:36 14/03/2015', store: 'HÀ ĐÔNG', quantity: '7', sum: '350.000đ', status: 'Đã thanh toán', action: 'Chi tiết'}
+  ]
+
+-
+  const orderInfo = [
+    {class: 'fa fa-user', content: 'GiangLe Leanhgiang89@gmail.com'},
+    {class: 'fa fa-map-marker', content: 'Tòa nhà Hà Nội group 442 Đội Cấn, Ba Đình Hà Nội'},
+    {class: 'fa fa-phone', content: '(04) 3786 8904'},
+  ]
+
+-
+  const address = [
+    {name: 'Tên', value: 'Giang'},
+    {name: 'Họ & tên đệm', value: 'Lê Anh'},
+    {name: 'Công ty', value: 'Cổ phần công nghệ DKT'},
+    {name: 'Địa chỉ', value: 'Tòa nhà Hà Nội Group, 442 Đội Cấn, Ba Đình, Hà Nội'},
+    {name: 'Thành phố', value: 'Hà Nội'},
+    {name: 'Quốc tịch', value: 'Việt Nam'},
+    {name: 'Postal/Zip Code', value: '2300089'},
+    {name: 'Phone', value: '0974554928'},
+  ]
+
+-
+  const contactInfo = [
+    {class: 'fa fa-map-marker', content: 'Tầng 4, Tòa nhà Hà Nội Group 442 Đội Cấn, P. Cống Vị, Q. Ba Đình, Hà Nội'},
+    {class: 'fa fa-phone', content: '(04) 6674 2332'},
+    {class: 'fa fa-envelope', content: 'support@milano.com'}
+  ]
+
+-
+  const contactSocial = [
+    'fa fa-facebook',
+    'fa fa-google-plus',
+    'fa fa-twitter',
+    'fa fa-youtube-play',
+    'fa fa-pinterest',
   ]

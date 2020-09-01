@@ -1,0 +1,18 @@
+@import ../base/_mixins
+@import ../base/_variables
+
+.products__right__items--list
+  @include mt-mb(27px, 0)
+
+  .product-list
+    position: relative
+
+    &:not(:first-child)
+      @include mt-mb(38px, 0)
+    
+      &::before
+        position: absolute
+        content: ""
+        top: -6%
+        width: 100%
+        border: 1px solid $color-border

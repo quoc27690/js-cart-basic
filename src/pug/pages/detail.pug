@@ -35,7 +35,7 @@ block container
               img(src='./assets/images/detail-main-middle.png')
           .detail__main__right
             .detail__right__title
-              +title-product('RƯỢU NHO NĂM 1987')
+              +title-product('RƯỢU NHO NĂM 1987', true)
             .detail__right__price
               +price-product('330.000')
             .detail__right__review
@@ -45,18 +45,18 @@ block container
                     i(class=item) 
               p 1 Review(S) | Add Your Review
             .detail__right__color
-              +detail-text-title('MÀU SẮC')
+              +detail-title('MÀU SẮC')
               each item in detailMainRightColor
                 button(style=`background-color: ${item}`)
             .detail__right__size
-              +detail-text-title('KÍCH CỠ')
+              +detail-title('KÍCH CỠ')
               .detail__size__container
                 select
                   each item in detailMainRightSize
                     option(value=item)= item
                 i.fa.fa-caret-down
             .detail__right__quantity
-              +detail-text-title('SỐ LƯỢNG')
+              +detail-title('SỐ LƯỢNG')
               form
                 .detail__quantity__detail
                   input
@@ -71,7 +71,7 @@ block container
                       i(class=item.class)
                       p= item.text
             .detail__right__description
-              +detail-text-title('MÔ TẢ')
+              +detail-title('MÔ TẢ')
               p Một hợp chất có trong rượu vang được gọi là resveratro có khả năng làm tăng tối đa tuổi thọ. Resveratro còn có khả năng ngăn chặn mật độ ôxy hoá của protein béo.
             .detail__right__social
               .detail__social__fb
@@ -100,9 +100,9 @@ block container
         .detail__content__container
           .detail__content__left
             .detail__content__title
-              +detail-text-title('ĐẶC ĐIỂM NỔI BẬT')
-              +detail-text-title('THÔNG TIN SẢN PHẨM')
-              +detail-text-title('ĐÁNH GIÁ')
+              +detail-title('ĐẶC ĐIỂM NỔI BẬT')
+              +detail-title('THÔNG TIN SẢN PHẨM')
+              +detail-title('ĐÁNH GIÁ')
             .detail__content__text
               p Đừng nghĩ rằng chỉ vì đôi chân to mà bạn không thể mặc được món đồ nào khác ngoài quần dài. Sau đây là những item vừa trendy lại vừa có tác dụng rất hiệu quả trong việc điều chỉnh đôi chân to của bạn. Mùa hè là mùa của những bộ cánh thoải mái, thoáng mát và hẳn cô gái nào cũng muốn khoe chân tối đa. Tuy nhiên, điều này lại không hề dễ dàng đối với những cô nàng sở hữu đôi chân to.Đừng nghĩ rằng chỉ vì đôi chân to mà bạn không thể mặc được món đồ nào khác ngoài quần dài. Sau đây là những item vừa trendy lại vừa có tác dụng rất hiệu quả trong việc điều chỉnh đôi chân to của bạn.
               P Mùa hè là mùa của những bộ cánh thoải mái, thoáng mát và hẳn cô gái nào cũng muốn khoe chân tối đa. Tuy nhiên, điều này lại không hề dễ dàng đối với những cô nàng sở hữu đôi chân to. Vậy diện đồ thế nào để vừa tạo cảm giác nhẹ nhàng nhưng lại khéo léo giấu được nhược điểm ấy? Sau đây, chúng tôi xin đưa ra gợi ý về loạt item mà các cô nàng chân to nên gắn bó trong mùa hè này.

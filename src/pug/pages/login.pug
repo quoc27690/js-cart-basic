@@ -1,0 +1,26 @@
+extends ../layouts/default-layout
+
+block title
+  title Đăng Nhập
+
+block container
+  .login
+    +login-link
+    .login__title
+      .wrapper
+        .login__title__container
+          +title-product('ĐĂNG NHẬP', true)
+          +button-big('ĐĂNG KÝ')
+    .login__content
+      .wrapper
+        .login__content__container
+          .login__content__title
+            p KHÁCH HÀNG ĐĂNG NHẬP
+            p Nếu bạn có một tài khoản, xin vui lòng đăng nhập.
+          .login__content__form
+            form
+              +input-text('Email', true, "")
+              +input-text('Password', true, "")
+              +input-checkbox('Quên mật khẩu', "")
+              +button-small('ĐĂNG NHẬP')
+            

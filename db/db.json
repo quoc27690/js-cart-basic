@@ -1,0 +1,68 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "link": "./assets/images/product-1.jpg",
+      "title": "Rượu Chivas",
+      "price": 100000,
+      "oldPrice": 120000,
+      "inCart": 0
+    },
+    {
+      "id": 2,
+      "link": "./assets/images/product-2.jpg",
+      "title": "Rượu Whisky",
+      "price": 200000,
+      "oldPrice": 220000,
+      "inCart": 0
+    },
+    {
+      "id": 3,
+      "link": "./assets/images/product-3.jpg",
+      "title": "Rượu Remy Martin",
+      "price": 300000,
+      "oldPrice": 330000,
+      "inCart": 0
+    },
+    {
+      "id": 4,
+      "link": "./assets/images/product-4.jpg",
+      "title": "Rượu Glenmorangie",
+      "price": 400000,
+      "oldPrice": 440000,
+      "inCart": 0
+    },
+    {
+      "id": 5,
+      "link": "./assets/images/product-5.jpg",
+      "title": "Rượu Cognac",
+      "price": 500000,
+      "oldPrice": 550000,
+      "inCart": 0
+    },
+    {
+      "id": 6,
+      "link": "./assets/images/product-6.jpg",
+      "title": "Rượu Vodka",
+      "price": 600000,
+      "oldPrice": 660000,
+      "inCart": 0
+    },
+    {
+      "id": 7,
+      "link": "./assets/images/product-7.jpg",
+      "title": "Rượu Macallan",
+      "price": 700000,
+      "oldPrice": 770000,
+      "inCart": 0
+    },
+    {
+      "id": 8,
+      "link": "./assets/images/product-8.jpg",
+      "title": "Rượu Brandy",
+      "price": 800000,
+      "oldPrice": 880000,
+      "inCart": 0
+    }
+  ]
+}

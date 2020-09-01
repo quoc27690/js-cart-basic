@@ -1,0 +1,16 @@
+extends ../layouts/default-layout
+
+block title
+  title Blog
+
+block container
+  .blog
+    +blog-link
+    .blog__title
+      .wrapper
+        +title-product('BLOG', true)
+    .blog__list
+      .wrapper
+        .blog__list__container
+          each item in blogList
+           +blog-item(item.link, item.text1, item.text2, item.text3)

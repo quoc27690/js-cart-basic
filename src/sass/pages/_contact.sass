@@ -1,0 +1,92 @@
+@import ../base/_mixins
+@import ../base/_variables
+
+.contact
+  .contact__title
+    @include mt-mb(25px, 0)
+    
+  .contact__content
+    @include mt-mb(30px, 125px)
+
+    .wrapper
+      .contact__content__container
+        @include grid(12, 30px)
+
+        .contact__content__left
+          grid-column: 1/13
+          @include md
+            grid-column: 1/9
+          font-size: $font-size-contact-content
+
+          label
+            flex-basis: 16%
+            display: flex
+
+          input, textarea
+            flex-grow: 1
+            @include pl-pr(10px, 10px)
+            @include pt-pb(10px, 10px)
+            border: 1px solid $color-border
+            background-color: $color-contact-bg
+
+          .input-text
+            @include mt-mb(55px, 0)
+
+            &:not(:first-of-type)
+              @include mt-mb(20px, 0)
+
+            label
+              align-items: center
+
+            input
+              height: 35px
+
+          .textarea-text
+            @include mt-mb(20px, 0)
+            
+            label
+              align-items: flex-start
+
+            textarea
+              height: 160px
+          
+          .button-small
+            @include ml-mr(16%, 0)
+            @include mt-mb(30px, 0)
+            
+        .contact__content__right
+          grid-column: 1/13
+          @include md
+            grid-column: 9/13
+        
+          & > ul
+            @include mt-mb(32px, 0)
+            font-size: $font-size-contact-content
+           
+            li 
+              float: none
+              display: flex
+
+              &:not(:first-child)
+                @include mt-mb(15px, 0)
+                
+              i 
+                flex-basis: 7%
+                
+              p
+                flex-basis: 70%
+ 
+          & > p
+            @include mt-mb(35px, 0)
+            font-size: $font-size-contact-title
+
+          .contact__content__social
+            @include mt-mb(20px, 0)
+
+            ul
+              li
+                @include ml-mr(0, 20px)
+                
+                a
+                  color: $color-primary
+                  font-size: $font-size-contact-social

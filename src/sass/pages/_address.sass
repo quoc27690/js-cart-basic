@@ -1,0 +1,116 @@
+@import ../base/_mixins
+@import ../base/_variables
+
+.address
+  .address__title
+    @include mt-mb(25px, 0)
+  
+  .address__content
+    @include mt-mb(25px, 90px)
+    
+    .wrapper
+      .address__content__container
+        color: $color-black
+        font-size: $font-size-address-content
+
+        .address__content__top
+          @include grid(12, 30px)
+
+          .address__top__left
+            grid-column: 1/13
+            @include md 
+              grid-column: 1/7
+
+            & > p
+              font-size: $font-size-address-title
+              
+          .address__top__right
+            grid-column: 1/13
+            @include md 
+              grid-column: 7/13
+
+            & > a
+              color: $color-address-button
+              font-size: $font-size-address-title
+              text-decoration: underline
+          
+          .address-1
+            .input-text
+              display: flex
+
+              &:first-child
+                @include mt-mb(32px, 0)
+              
+              &:not(:first-child)
+                @include mt-mb(15px, 0)
+                
+              label
+                flex-basis: 22%
+                display: flex
+                align-items: center
+                
+              input
+                flex-grow: 1
+                height: 37px
+                @include pl-pr(22px, 22px)
+
+            .input-checkbox
+              @include ml-mr(23%, 0)
+              @include mt-mb(25px, 0)
+              
+              input
+                position: relative
+                visibility: visible
+
+                &::after
+                  position: absolute
+                  visibility: hidden
+
+            .address-1__btn
+              display: flex
+              @include ml-mr(23%, 0)
+              @include mt-mb(27px, 0)
+              
+              .button-address
+                @include ml-mr(0, 10px)
+
+                &:first-child
+                  button
+                    background-color: $color-address-button
+                
+        .address__content__bottom
+          @include grid(12, 30px)
+          grid-row-gap: 0
+          
+          .address-2
+            grid-column: 1/13
+            @include md
+              grid-column: 1/7
+            border-top: 1px solid $color-border
+            @include mt-mb(34px, 0)
+            
+            .input-text
+              display: flex
+
+              &:first-child
+                @include mt-mb(20px, 0)
+              
+              &:not(:first-child)
+                @include mt-mb(15px, 0)
+                
+              label
+                flex-basis: 22%
+                display: flex
+                
+              input
+                flex-grow: 1
+                height: 37px
+                @include pl-pr(22px, 22px)
+                border: none
+
+            & > a
+              display: flex
+              justify-content: flex-end
+              @include mt-mb(15px, 0)
+              color: $color-address-button
+              text-decoration: underline

@@ -1,0 +1,264 @@
+@import ../base/_mixins
+@import ../base/_variables
+
+.blog-detail
+  .blog-detail__title
+    @include mt-mb(25px, 0)
+  
+  .blog-detail__content
+    @include mt-mb(30px, 0)
+    
+    .wrapper
+      .blog-detail__content__container
+        @include grid(12, 30px)
+
+        .blog-detail__content__left
+          grid-column: 1/4
+
+          .blog-detail__left__newest
+            .blog-detail__newest__items
+              @include mt-mb(35px, 0)
+              
+              .blog-detail__newest__item
+                display: flex
+
+                &:not(:first-child)
+                  @include mt-mb(22px, 0)
+                  
+                .blog-detail__item__left
+                  img 
+                    width: 98px
+
+                .blog-detail__item__right
+                  display: none
+                  @include lg 
+                    display: block
+                  @include ml-mr(15px, 0)
+                  
+                  p 
+                    color: $color-black
+                    font-family: "Roboto"
+                    font-size: $font-size-blog-detail-content-left-newest-title
+                    text-transform: uppercase
+                  
+                  i, span
+                    font-size: $font-size-blog-detail-content-left-newest-time
+
+                  i
+                    @include mt-mb(12px, 0)
+
+                  span
+                    @include ml-mr(9px, 0)
+                    font-family: roboto-light
+
+          .blog-detail__left__tag
+            @include mt-mb(35px, 0)
+            
+            ul
+              display: flex
+              flex-wrap: wrap
+              @include mt-mb(30px, 0)
+
+              li 
+                float: none
+                @include ml-mr(0, 7px)
+                @include mt-mb(9px, 0)
+                
+                button 
+                  height: 25px
+                  @include pl-pr(10px, 10px)
+                  border: 1px solid $color-border
+                  border-radius: 5px
+                  background-color: transparent
+                  color: $color-primary
+                  font-family: "Roboto"
+                  font-size: $font-size-blog-detail-content-left-tag
+
+                  &:hover
+                    background-color: $color-blog-detail-tag-hover
+                    color: $color-white
+                  
+          .blog-detail__left__video
+            @include mt-mb(58px, 0)
+
+            .blog-detail__video__item
+              position: relative
+              @include mt-mb(20px, 0)
+              
+              img
+                width: 100%
+
+              i 
+                position: absolute
+                top: 0
+                left: 0
+                right: 0
+                bottom: 0
+                display: flex
+                justify-content: center
+                align-items: center
+                @include ml-mr(105px, 115px)
+                @include mt-mb(70px, 70px)
+                border-radius: 50%
+                background-color: $color-blog-detail-video-circle
+                color: $color-white
+                font-size: $font-size-blog-detail-content-left-video
+                cursor: pointer
+                
+        .blog-detail__content__right
+          grid-column: 4/13
+
+          .blog-item
+            &__image
+              .blog-item__image__hover
+                display: none    
+            
+            &__title
+              @include mt-mb(43px, 0)
+              
+              a
+                font-size: $font-size-blog-detail-content-right-title
+
+            &__time
+              @include mt-mb(25px, 0)
+
+              p 
+                font-size: $font-size-blog-detail-content-right-time
+
+            &__content
+              @include mt-mb(20px, 0)
+
+              p 
+                font-size: $font-size-blog-detail-content-right-content
+                font-style: italic
+                line-height: 1.6
+
+          .blog-detail__right__opinion
+            @include mt-mb(55px, 0)
+            
+            .blog-detail__opinion__title
+              p 
+                color: $color-black
+                font-size: $font-size-blog-detail-title
+                font-style: italic
+
+            .blog-detail__opinion__form
+              @include mt-mb(25px, 0)
+              
+              form
+                .input-text, .textarea-text
+                  color: $color-black
+                  font-size: $font-size-blog-detail-opinion-form-textinput
+                  font-style: italic
+
+                  label
+                    flex-basis: 8%
+                    span
+                      color: $color-red
+                  
+                  input, textarea
+                    flex-grow: 1
+                    @include pl-pr(10px, 10px)
+                    border: 1px solid $color-border
+                
+                .input-text
+                  &:nth-of-type(2)
+                    @include mt-mb(35px, 0)
+                  
+                  input 
+                    height: 40px
+
+                .textarea-text
+                  @include mt-mb(35px, 0)
+
+                  textarea 
+                    height: 273px
+                    @include pt-pb(10px, 10px)
+
+                & > button
+                  @include pl-pr(25px, 15px)
+                  @include pt-pb(15px, 10px)
+                  border-radius: 10px
+                  @include mt-mb(40px, 0)
+                  @include ml-mr(8%, 0)
+                  font-family: 'Times New Roman'
+                  font-size: $font-size-blog-detail-opinion-form-button
+
+                  &:hover
+                    background-color: $color-hover
+                  
+          .blog-detail__right__comment
+            @include mt-mb(60px, 0)
+
+            .blog-detail__comment__title
+              p
+                color: $color-black
+                font-size: $font-size-blog-detail-title
+
+            .blog-detail__comment__item
+              @include mt-mb(25px, 0)
+              
+              .comment
+                &:not(:first-child)
+                  @include mt-mb(40px, 0)
+                  
+                .comment__title
+                  display: flex
+                  justify-content: space-between
+                  align-items: center
+                  height: 45px
+                  border-radius: 5px
+                  background-color: $color-blog-detail-comment-title
+
+                  p
+                    font-size: $font-size-blog-detail-comment
+                    font-style: italic
+
+                  .comment__title__left
+                    display: flex
+                    @include ml-mr(22px, 0)
+                    
+                    p
+                      &:first-child
+                        @include pl-pr(0, 35px)
+                        border-right: 1px solid $color-primary
+                      
+                      &:last-child
+                        @include pl-pr(15px, 0)
+                        
+                  .comment__title__right
+                    @include ml-mr(0, 32px)
+                    
+                    p
+                      text-decoration: underline
+
+                .comment__content
+                  @include ml-mr(22px, 0)
+                  @include mt-mb(15px, 0)
+                  
+                  p
+                    font-size: $font-size-blog-detail-comment
+
+            .blog-detail__comment__page
+              display: flex
+              justify-content: flex-end
+              @include mt-mb(35px, 125px)
+
+              a
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 37px
+                height: 37px
+                border: 1px solid $color-border
+                @include ml-mr(14px, 0)
+                color: $color-black
+                font-size: $font-size-blog-detail-page
+
+                &:first-child, &:last-child
+                  color: $color-white
+                  background-color: $color-black
+              
+              .active
+                color: $color-white
+                background-color: $color-primary

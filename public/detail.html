@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rượu Vang Đỏ</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/styles.css">
   </head>
@@ -14,13 +15,31 @@
           <div class="wrapper">
             <div class="header__top-menu__left"><i class="fa fa-bars"></i>
               <ul>
-                <li><a href="#">Tài khoản của tôi</a></li>
-                <li><a href="#">Trạng thái đơn hàng</a></li>
-                <li><a href="#">Danh sách ưa thích</a></li>
-                <li><a href="./cart.html">Giỏ hàng</a></li>
+                <li><a href="./address.html">Tài khoản của tôi</a></li>
+                <li><a href="./order.html">Trạng thái đơn hàng</a></li>
+                <li><a onclick="document.getElementById('modal').style.display='block'">Danh sách ưa thích</a></li>
+                <li><a href="./cart.html">Giỏ hàng<span>0</span></a></li>
                 <li><a href="./login.html">Đặng nhập</a></li>
                 <li><a href="./register.html">Đăng ký</a></li>
               </ul>
+              <div id="modal">
+                <div class="modal">
+                  <div class="modal__content"><img src="./assets/images/modal.png"><i class="fa fa-times" onclick="document.getElementById('modal').style.display='none'"></i>
+                    <div class="modal__content__text">
+                      <p>Gửi Email</p>
+                      <p>Đăng ký Email ngay hôm nay để nhận được thông tin về các sự kiện, các chương trình giảm giá của chúng tôi sớm nhất!</p>
+                      <form>
+                        <input>
+                        <button>GỬI EMAIL</button>
+                      </form>
+                      <div class="input-checkbox">
+                        <input type="checkbox" id="Không hiển thị lại thông báo này" value=""/>
+                        <label for="Không hiển thị lại thông báo này">Không hiển thị lại thông báo này</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="header__top-menu__right">
               <form>
@@ -76,8 +95,8 @@
                   <div class="header__sub__triangle"></div>
                 </div>
               </li>
-              <li> <a class="header__list__item" href="#">Rượu vang trắng</a></li>
-              <li> <a class="header__list__item" href="#">Champagne</a></li>
+              <li> <a class="header__list__item" href="./products-grid.html">Rượu vang trắng</a></li>
+              <li> <a class="header__list__item" href="./error.html">Champagne</a></li>
               <li> <a class="header__list__item" href="./introduce.html">Thông tin</a></li>
               <li> <a class="header__list__item" href="./blog.html">Blog</a></li>
               <li> <a class="header__list__item" href="./contact.html">Liên hệ</a></li>
@@ -91,7 +110,7 @@
         <div class="wrapper">
           <ul>
             <li><a href="./index.html">Trang chủ</a></li>
-            <li><a href="#">Sản phẩm</a></li>
+            <li><a href="./error.html">Sản phẩm</a></li>
             <li><a href="./detail.html">Rượu vang đỏ</a></li>
           </ul>
         </div>
@@ -150,15 +169,15 @@
                 <p>1 Review(S) | Add Your Review</p>
               </div>
               <div class="detail__right__color">
-                <div class="detail-text-title">
+                <div class="detail-title">
                   <p>MÀU SẮC</p>
                 </div>
-                <button style="background-color: #e6ae48"></button>
-                <button style="background-color: #030102"></button>
-                <button style="background-color: #9c0001"></button>
+                <button style="background-color: ./error.htmle6ae48"></button>
+                <button style="background-color: ./error.html030102"></button>
+                <button style="background-color: ./error.html9c0001"></button>
               </div>
               <div class="detail__right__size">
-                <div class="detail-text-title">
+                <div class="detail-title">
                   <p>KÍCH CỠ</p>
                 </div>
                 <div class="detail__size__container">
@@ -170,7 +189,7 @@
                 </div>
               </div>
               <div class="detail__right__quantity">
-                <div class="detail-text-title">
+                <div class="detail-title">
                   <p>SỐ LƯỢNG</p>
                 </div>
                 <form>
@@ -193,7 +212,7 @@
                 </ul>
               </div>
               <div class="detail__right__description">
-                <div class="detail-text-title">
+                <div class="detail-title">
                   <p>MÔ TẢ</p>
                 </div>
                 <p>Một hợp chất có trong rượu vang được gọi là resveratro có khả năng làm tăng tối đa tuổi thọ. Resveratro còn có khả năng ngăn chặn mật độ ôxy hoá của protein béo.</p>
@@ -227,13 +246,13 @@
           <div class="detail__content__container">
             <div class="detail__content__left">
               <div class="detail__content__title">
-                <div class="detail-text-title">
+                <div class="detail-title">
                   <p>ĐẶC ĐIỂM NỔI BẬT</p>
                 </div>
-                <div class="detail-text-title">
+                <div class="detail-title">
                   <p>THÔNG TIN SẢN PHẨM</p>
                 </div>
-                <div class="detail-text-title">
+                <div class="detail-title">
                   <p>ĐÁNH GIÁ</p>
                 </div>
               </div>
@@ -274,9 +293,9 @@
                     <div class="button-add-to-cart">
                       <button>ADD TO CART</button>
                     </div>
-                    <div class="product__compare"><a href="#"><i class="fa fa-heart"></i>
-                        <p>Yêu thích</p></a><a href="#"><i class="fa fa-signal"></i>
-                        <p>So sánh</p></a><a href="#"><i class="fa fa-compress"></i></a></div>
+                    <div class="product__compare"><a href="./error.html"><i class="fa fa-heart"></i>
+                        <p>Yêu thích</p></a><a href="./error.html"><i class="fa fa-signal"></i>
+                        <p>So sánh</p></a><a href="./error.html"><i class="fa fa-compress"></i></a></div>
                   </div>
                   <div class="product">
                     <div class="product__image"><img src="./assets/images/product-2.jpg"/></div>
@@ -291,9 +310,9 @@
                     <div class="button-add-to-cart">
                       <button>ADD TO CART</button>
                     </div>
-                    <div class="product__compare"><a href="#"><i class="fa fa-heart"></i>
-                        <p>Yêu thích</p></a><a href="#"><i class="fa fa-signal"></i>
-                        <p>So sánh</p></a><a href="#"><i class="fa fa-compress"></i></a></div>
+                    <div class="product__compare"><a href="./error.html"><i class="fa fa-heart"></i>
+                        <p>Yêu thích</p></a><a href="./error.html"><i class="fa fa-signal"></i>
+                        <p>So sánh</p></a><a href="./error.html"><i class="fa fa-compress"></i></a></div>
                   </div>
                   <div class="product">
                     <div class="product__image"><img src="./assets/images/product-3.jpg"/></div>
@@ -308,9 +327,9 @@
                     <div class="button-add-to-cart">
                       <button>ADD TO CART</button>
                     </div>
-                    <div class="product__compare"><a href="#"><i class="fa fa-heart"></i>
-                        <p>Yêu thích</p></a><a href="#"><i class="fa fa-signal"></i>
-                        <p>So sánh</p></a><a href="#"><i class="fa fa-compress"></i></a></div>
+                    <div class="product__compare"><a href="./error.html"><i class="fa fa-heart"></i>
+                        <p>Yêu thích</p></a><a href="./error.html"><i class="fa fa-signal"></i>
+                        <p>So sánh</p></a><a href="./error.html"><i class="fa fa-compress"></i></a></div>
                   </div>
                   <div class="product">
                     <div class="product__image"><img src="./assets/images/product-4.jpg"/></div>
@@ -325,9 +344,9 @@
                     <div class="button-add-to-cart">
                       <button>ADD TO CART</button>
                     </div>
-                    <div class="product__compare"><a href="#"><i class="fa fa-heart"></i>
-                        <p>Yêu thích</p></a><a href="#"><i class="fa fa-signal"></i>
-                        <p>So sánh</p></a><a href="#"><i class="fa fa-compress"></i></a></div>
+                    <div class="product__compare"><a href="./error.html"><i class="fa fa-heart"></i>
+                        <p>Yêu thích</p></a><a href="./error.html"><i class="fa fa-signal"></i>
+                        <p>So sánh</p></a><a href="./error.html"><i class="fa fa-compress"></i></a></div>
                   </div>
                   <div class="product">
                     <div class="product__image"><img src="./assets/images/product-5.jpg"/></div>
@@ -342,9 +361,9 @@
                     <div class="button-add-to-cart">
                       <button>ADD TO CART</button>
                     </div>
-                    <div class="product__compare"><a href="#"><i class="fa fa-heart"></i>
-                        <p>Yêu thích</p></a><a href="#"><i class="fa fa-signal"></i>
-                        <p>So sánh</p></a><a href="#"><i class="fa fa-compress"></i></a></div>
+                    <div class="product__compare"><a href="./error.html"><i class="fa fa-heart"></i>
+                        <p>Yêu thích</p></a><a href="./error.html"><i class="fa fa-signal"></i>
+                        <p>So sánh</p></a><a href="./error.html"><i class="fa fa-compress"></i></a></div>
                   </div>
                   <div class="product">
                     <div class="product__image"><img src="./assets/images/product-6.jpg"/></div>
@@ -359,9 +378,9 @@
                     <div class="button-add-to-cart">
                       <button>ADD TO CART</button>
                     </div>
-                    <div class="product__compare"><a href="#"><i class="fa fa-heart"></i>
-                        <p>Yêu thích</p></a><a href="#"><i class="fa fa-signal"></i>
-                        <p>So sánh</p></a><a href="#"><i class="fa fa-compress"></i></a></div>
+                    <div class="product__compare"><a href="./error.html"><i class="fa fa-heart"></i>
+                        <p>Yêu thích</p></a><a href="./error.html"><i class="fa fa-signal"></i>
+                        <p>So sánh</p></a><a href="./error.html"><i class="fa fa-compress"></i></a></div>
                   </div>
                   <div class="product">
                     <div class="product__image"><img src="./assets/images/product-7.jpg"/></div>
@@ -376,9 +395,9 @@
                     <div class="button-add-to-cart">
                       <button>ADD TO CART</button>
                     </div>
-                    <div class="product__compare"><a href="#"><i class="fa fa-heart"></i>
-                        <p>Yêu thích</p></a><a href="#"><i class="fa fa-signal"></i>
-                        <p>So sánh</p></a><a href="#"><i class="fa fa-compress"></i></a></div>
+                    <div class="product__compare"><a href="./error.html"><i class="fa fa-heart"></i>
+                        <p>Yêu thích</p></a><a href="./error.html"><i class="fa fa-signal"></i>
+                        <p>So sánh</p></a><a href="./error.html"><i class="fa fa-compress"></i></a></div>
                   </div>
                   <div class="product">
                     <div class="product__image"><img src="./assets/images/product-8.jpg"/></div>
@@ -393,9 +412,9 @@
                     <div class="button-add-to-cart">
                       <button>ADD TO CART</button>
                     </div>
-                    <div class="product__compare"><a href="#"><i class="fa fa-heart"></i>
-                        <p>Yêu thích</p></a><a href="#"><i class="fa fa-signal"></i>
-                        <p>So sánh</p></a><a href="#"><i class="fa fa-compress"></i></a></div>
+                    <div class="product__compare"><a href="./error.html"><i class="fa fa-heart"></i>
+                        <p>Yêu thích</p></a><a href="./error.html"><i class="fa fa-signal"></i>
+                        <p>So sánh</p></a><a href="./error.html"><i class="fa fa-compress"></i></a></div>
                   </div>
                 </div>
               </div>
@@ -478,6 +497,5 @@
         </div>
       </div>
     </footer>
-    <script src="./js/scripts.js"></script>
   </body>
 </html>

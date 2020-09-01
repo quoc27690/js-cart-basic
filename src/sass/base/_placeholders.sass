@@ -9,3 +9,35 @@
   content: ''
   border-top: 5px solid transparent
   border-bottom: 5px solid transparent
+
+%product-slide
+  overflow: hidden
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+
+  &:first-child, &:nth-child(5)
+    @include ml-mr(0, 15px)
+
+  &:nth-child(4), &:last-child
+    @include ml-mr(15px, 0)
+
+  &:not(:first-child, &:nth-child(4), &:nth-child(5), &:last-child)
+    @include ml-mr(15px, 15px)
+  
+%button
+  background-color: $color-black
+  color: $color-white
+  font-family: "Times New Roman"
+
+%button-small
+  @extend %button
+  font-size: $font-size-primary
+
+%button-big
+  @extend %button
+  font-size: $font-size-button-big
+
+%button-address
+  @extend %button
+  font-size: $font-size-address-button

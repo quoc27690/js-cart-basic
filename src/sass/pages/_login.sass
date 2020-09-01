@@ -1,0 +1,59 @@
+@import ../base/_mixins
+@import ../base/_variables
+
+.login
+  .login__title
+    @include mt-mb(25px, 0)
+
+    .wrapper
+      .login__title__container
+        display: flex
+        justify-content: space-between
+        align-items: center
+  
+  .login__content
+    @include mt-mb(30px, 125px)
+    
+    .wrapper
+      .login__content__container
+        @include pl-pr(55px, 67px)
+        @include pt-pb(45px, 45px)
+        border: 1px solid $color-border
+        color: $color-black
+        font-size: $font-size-login-content
+
+        .login__content__title
+          p
+            &:first-child
+              font-size: $font-size-login-title
+
+            &:last-child
+              @include mt-mb(15px, 0)
+              font-family: "Open Sans"
+        .login__content__form
+          form
+            & > .input-text
+              @include mt-mb(45px, 0)
+
+            & > .input-text + .input-text
+              @include mt-mb(30px, 0)
+
+            .input-text
+              label
+                flex-basis: 8%
+
+                span
+                  @include ml-mr(5px, 0)
+                  
+              input
+                flex-grow: 1
+                height: 31px
+                @include pl-pr(10px, 10px)
+
+            .input-checkbox
+              @include mt-mb(20px, 0)
+              @include ml-mr(8%, 0)
+
+            .button-small
+              @include ml-mr(8%, 0)
+              @include mt-mb(25px, 0)

@@ -1,0 +1,119 @@
+@import ../base/_mixins
+@import ../base/_variables
+
+.order
+  .order__title
+    @include mt-mb(25px, 0)
+  
+  .order__content
+    @include mt-mb(30px, 90px)
+    
+    .wrapper
+      .order__content__container
+        @include grid(12, 30px)
+        color: $color-black
+        font-size: $font-size-order-content
+
+        .order__content__left
+          grid-column: 1/13
+          @include lg
+            grid-column: 1/10
+
+          .order__left__title
+            @include pt-pb(30px, 35px)
+            @include pl-pr(20px, 0)
+            border: 1px solid $color-border
+            background-color: $color-order-bg
+
+            p
+              font-size: $font-size-order-title
+            
+            ul 
+              display: flex
+              flex-wrap: wrap
+              @include mt-mb(15px, 0)
+              
+              li
+                float: none
+                border-right: 1px solid $color-border
+                @include mt-mb(5px, 0)
+
+                &:first-child, &:nth-child(7)
+                  @include pl-pr(0, 12px)
+
+                &:not(:first-child):not(:nth-child(7))
+                  @include pl-pr(12px, 12px)
+                  
+                &:last-child, &:nth-child(6)
+                  border-right: none
+
+                a
+                  color: inherit
+
+          .order__left__table
+            table
+              width: 100%
+              border-collapse: collapse
+              text-align: center
+
+              tr
+                border: 1px solid $color-border
+
+                &:not(:first-child):not(:last-child)
+                  border-top: none
+                  border-bottom: none
+                
+                &:last-child
+                  border-top: none
+
+                  td
+                    @include pt-pb(22px, 10px)
+
+                th, td
+                  @include pl-pr(18px, 18px)
+                  vertical-align: top
+                  border-right: 1px solid $color-border
+                
+                th
+                  @include pt-pb(20px, 12px)
+                  font-size: $font-size-primary
+
+                td
+                  @include pt-pb(22px, 0)
+                  font-size: $font-size-order-content
+
+                  &:nth-child(2)
+                    text-align: left
+
+                    p
+                      &:last-child
+                        color: $color-primary
+                        font-size: $font-size-primary
+
+        .order__content__right
+          grid-column: 1/13
+          @include lg
+            grid-column: 10/13
+          height: max-content
+          @include pl-pr(25px, 25px)
+          @include pt-pb(30px, 30px)
+          border: 1px solid $color-border
+          background-color: $color-order-bg
+          font-size: $font-size-order-title
+
+          .order__right__title
+            p 
+              font-size: $font-size-order-title
+          
+          ul
+            li
+              float: none
+              display: flex
+              @include mt-mb(18px, 0)
+              
+              p 
+                @include ml-mr(13px, 0)
+          
+          & > p
+            @include mt-mb(35px, 0)
+            text-decoration: underline

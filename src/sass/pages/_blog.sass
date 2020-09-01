@@ -1,0 +1,14 @@
+@import ../base/_mixins
+@import ../base/_variables
+
+.blog
+  .blog__title
+    @include mt-mb(25px, 0)
+  
+  .blog__list
+    @include mt-mb(30px, 75px)
+    
+    .wrapper
+      .blog__list__container
+        @include grid(3, 30px)
+        grid-row-gap: 35px

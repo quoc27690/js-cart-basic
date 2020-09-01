@@ -1,0 +1,12 @@
+extends ../layouts/products
+
+block products-pag-left
+  a(href='./products-grid.html')
+    i.fa.fa-th
+  a.active(href='./products-list.html')
+    i.fa.fa-th-list
+
+block products-right-items
+  .products__right__items--list
+    each item in productsContentRightList
+      +product-list(item.link, item.title, item.price, item.content)

@@ -1,0 +1,9 @@
+extends ../layouts/products
+
+block script
+  script(src='./js/products.js')
+
+block products-right-items
+  .products__right__items--grid
+    each item in productsContentRightGrid
+      +product(item.link, item.title, item.price1, item.price2, item.corner)(style=`background-color: ${item.color}; color: ${item.color}`)

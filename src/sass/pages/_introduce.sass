@@ -1,0 +1,33 @@
+@import ../base/_mixins
+@import ../base/_variables
+
+.intro
+  .intro__title
+    @include mt-mb(25px, 0)
+  
+  .intro__content
+    @include mt-mb(30px, 100px)
+    
+    .wrapper
+      .intro__content__container
+        @include grid(12, 30px)
+
+        .intro__content__left
+          grid-column: 1/6
+
+          img 
+            width: 100%
+
+        .intro__content__right
+          grid-column: 6/12
+
+          p
+            &:first-child
+              color: $color-black
+              font-size: $font-size-intro-content-right-title
+              text-transform: uppercase
+              letter-spacing: 3px
+            
+            &:last-child
+              @include mt-mb(15px, 0)
+              font-size: $font-size-intro-content-right-content

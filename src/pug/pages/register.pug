@@ -1,0 +1,34 @@
+extends ../layouts/default-layout
+
+block title
+  title Đăng kÝ
+
+block container
+  .register
+    +register-link
+    .register__title
+      .wrapper
+        .register__title__container
+          +title-product('ĐĂNG KÝ', true)
+          +button-big('ĐĂNG NHẬP')
+    .register__content
+      .wrapper
+        .register__content__container
+          .register__content__title
+            p THÔNG TIN CÁ NHÂN
+          .register__content__form
+            form
+              +input-text('Tên trước', true, "")
+              +input-text('Tên sau', true, "")
+              +input-text('Email', true, "")
+              +input-text('Password', true, "")
+              +input-checkbox('Đăng ký nhận bản tin', "")
+              .register__form__title
+                p THÔNG TIN ĐĂNG NHẬP
+              +input-text('Mật khẩu', true, "")
+              +input-text('Xác nhận mật khẩu', true, "")(class='extend')
+              .register__form__btn
+                +button-small('GỬI')
+                +button-small('QUAY LẠI')
+
+            

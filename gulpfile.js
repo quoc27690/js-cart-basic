@@ -36,15 +36,15 @@ function htmlTask() {
 
 /** JS Task */
 function jsTask() {
-  return src(jsFiles).pipe(concat("scripts.js")).pipe(dest("public/js"));
+  // return src(jsFiles).pipe(concat("scripts.js")).pipe(dest("public/js"));
+  return src(jsFiles).pipe(dest("public/js"));
 }
 
 /** Assets Task */
 
 function assetsTask() {
   return src(assetsFiles)
-      .pipe(dest('public/assets'))
-
+    .pipe(dest('public/assets'))
 }
 
 /** Watch Task */
@@ -54,6 +54,7 @@ function serve() {
     server: {
       baseDir: "public",
     },
+    port: 3000
   });
 
   watch(sassFiles, sassTask);

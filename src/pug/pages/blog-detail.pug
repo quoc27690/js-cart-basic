@@ -1,0 +1,55 @@
+extends ../layouts/default-layout
+
+block title
+  title Blog
+
+block container
+  .blog-detail
+    +blog-link
+    .blog-detail__title
+      .wrapper
+        +title-product('BLOG', true)
+    .blog-detail__content
+      .wrapper
+        .blog-detail__content__container
+          .blog-detail__content__left
+            .blog-detail__left__newest
+              +blog-detail-left-title('BÀI VIẾT MỚI NHẤT')
+              .blog-detail__newest__items
+                each item in blogDetailNewestItem
+                  +blog-detail-newest-item(item.img, item.title, item.time)
+            .blog-detail__left__tag
+              +blog-detail-left-title('BLOG TAGS')
+              ul
+                each item in productsContentLeftTag
+                  li 
+                    button= item
+            .blog-detail__left__video
+              +blog-detail-left-title('LATEST VIDEO')
+              .blog-detail__video__item
+                img(src='./assets/images/blog-detail-content-left-video.png')
+                i.fa.fa-play
+          .blog-detail__content__right
+            +blog-item(blogItem[0].link, blogItem[0].text1, blogItem[0].text2, blogItem[0].text3, false)
+            .blog-detail__right__opinion
+              .blog-detail__opinion__title
+                p ĐÓNG GÓP Ý KIẾN
+              .blog-detail__opinion__form
+                form
+                  +input-text('Tên', true, "")
+                  +input-text('Email', true, "")
+                  +textarea-text('ý kiến', true)
+                  button= 'GỬI Ý KIẾN'
+            .blog-detail__right__comment
+              .blog-detail__comment__title
+                p BÌNH LUẬN (3)
+              .blog-detail__comment__item
+                each item in comment
+                  +comment(item.text1, item.text2, item.text3)
+              .blog-detail__comment__page
+                each item in commentPage
+                  if item == '1'
+                    a.active(href='#')= item
+                  else
+                    a(href='#')= item
+
