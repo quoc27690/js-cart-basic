@@ -2,7 +2,10 @@
 @import ../base/_variables
 
 .products__right__items--grid
-  @include grid(3, 30px)
+  @include grid(2, 30px)
+  @include lg 
+    @include grid(3, 30px)
+
   @include mt-mb(25px, 0)
   text-align: center
 

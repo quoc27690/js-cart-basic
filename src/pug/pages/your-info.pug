@@ -1,0 +1,22 @@
+extends ../layouts/default-layout
+
+block title
+  title Thông Tin Thanh Toán
+
+block script
+  script(src='./js/your-info.js')
+
+block container
+  .your-info
+    +your-info-link
+    .your-info__progress-bar
+      .wrapper
+        .your-info__progress-bar__container
+          .your-info__progress-bar__item
+            p STEP 2: THÔNG TIN THANH TOÁN
+    .your-info__title
+      .wrapper
+        +title-product('THÔNG TIN THANH TOÁN', true)
+    .your-info__content
+      .wrapper
+        +address-3

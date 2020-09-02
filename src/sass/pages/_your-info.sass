@@ -1,0 +1,75 @@
+@import ../base/_mixins
+@import ../base/_variables
+
+.your-info
+  .your-info__progress-bar
+    @include mt-mb(25px, 0)
+
+    .wrapper
+      .your-info__progress-bar__container
+        border-radius: 16px
+        background-color: $color-primary
+
+        .your-info__progress-bar__item
+          text-align: end
+          width: 66.66%
+          border-radius: 16px
+          background-color: $color-hover
+          
+          p 
+            @include pl-pr(0, 30px)
+            @include pt-pb(5px, 5px)
+            
+            color: $color-white
+            font-size: $font-size-progress-bar
+
+  .your-info__title
+    @include mt-mb(25px, 0)
+    
+  .your-info__content
+    @include mt-mb(30px, 40px)
+
+    .wrapper
+      .address-3
+        .input-text
+          display: flex
+
+          &:first-child
+            @include mt-mb(32px, 0)
+          
+          &:not(:first-child)
+            @include mt-mb(15px, 0)
+            
+          label
+            flex-basis: 10%
+            display: flex
+            align-items: center
+            
+          input
+            flex-grow: 1
+            height: 37px
+            @include pl-pr(22px, 22px)
+
+        .input-checkbox
+          @include ml-mr(10%, 0)
+          @include mt-mb(25px, 0)
+          
+          input
+            position: relative
+            visibility: visible
+
+            &::after
+              position: absolute
+              visibility: hidden
+
+        .address-3__btn
+          display: flex
+          @include ml-mr(10%, 0)
+          @include mt-mb(27px, 0)
+          
+          .button-small
+            @include ml-mr(0, 10px)
+
+            &:last-child
+              button
+                background-color: $color-address-button

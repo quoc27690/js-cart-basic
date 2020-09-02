@@ -161,6 +161,12 @@ mixin address-link
 mixin contact-link
   +link(contactLink)
 
+mixin your-info-link
+  +link(yourInfoLink)
+
+mixin payment-link
+  +link(paymentLink)
+
 mixin products-banner
   .products__banner
     .wrapper
@@ -265,3 +271,12 @@ mixin address-2
     each item in address
       +input-text(item.name, false, item.value)
     a(href='./error.html') Chỉnh sửa địa chỉ
+
+mixin address-3
+  .address-3
+    each item in address3
+      +input-text(item.name, false, "")
+    +input-checkbox('Đặt làm địa chỉ mặc định', "")
+    .address-3__btn
+      +button-small('QUAY LẠI GIỎ HÀNG')
+      +button-small('TIẾP THEO')

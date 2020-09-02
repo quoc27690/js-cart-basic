@@ -1,0 +1,36 @@
+extends ../layouts/default-layout
+
+block title
+  title Hoàn Tất Thanh Toán
+
+block script
+  script(src='./js/payment.js')
+
+block container
+  .payment
+    +payment-link
+    .payment__progress-bar
+      .wrapper
+        .payment__progress-bar__container
+          .payment__progress-bar__item
+            p STEP 3: HOÀN TẤT THANH TOÁN
+    .payment__title
+      .wrapper
+        +title-product('HOÀN TẤT THANH TOÁN', true)
+    .payment__content
+      .wrapper
+        .payment__content__container
+          .payment__content__info
+            p THÔNG TIN NGƯỜI NHẬN
+          .payment__content__cart
+            p THÔNG TIN GIỎ HÀNG
+            table
+              tr
+                each item in paymentMenu
+                  th= item
+            .payment__cart__sum 
+              p TỔNG TIỀN:
+        .payment__content__btn
+          +button-small('QUAY LẠI THÔNG TIN')
+          +button-small('HOÀN TẤT')
+              

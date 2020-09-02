@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoàn Tất Thanh Toán</title>
+    <title>Thông Tin Thanh Toán</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/styles.css">
@@ -105,59 +105,65 @@
         </div>
       </div>
     </header>
-    <div class="payment">
+    <div class="your-info">
       <div class="link">
         <div class="wrapper">
           <ul>
             <li><a href="./index.html">Trang chủ</a></li>
-            <li><a href="./payment.html">Hoàn tất thanh toán</a></li>
+            <li><a href="./your-info.html">Thông tin thanh toán</a></li>
           </ul>
         </div>
       </div>
-      <div class="payment__progress-bar">
+      <div class="your-info__progress-bar">
         <div class="wrapper">
-          <div class="payment__progress-bar__container">
-            <div class="payment__progress-bar__item">
-              <p>STEP 3: HOÀN TẤT THANH TOÁN</p>
+          <div class="your-info__progress-bar__container">
+            <div class="your-info__progress-bar__item">
+              <p>STEP 2: THÔNG TIN THANH TOÁN</p>
             </div>
           </div>
         </div>
       </div>
-      <div class="payment__title">
+      <div class="your-info__title">
         <div class="wrapper">
           <div class="title-product">
-            <p>HOÀN TẤT THANH TOÁN</p><img src="./assets/images/arrow.png"/>
+            <p>THÔNG TIN THANH TOÁN</p><img src="./assets/images/arrow.png"/>
           </div>
         </div>
       </div>
-      <div class="payment__content">
+      <div class="your-info__content">
         <div class="wrapper">
-          <div class="payment__content__container">
-            <div class="payment__content__info">
-              <p>THÔNG TIN NGƯỜI NHẬN</p>
+          <div class="address-3">
+            <div class="input-text">
+              <label for="Người nhận">Người nhận
+              </label>
+              <input type="text" id="Người nhận" value=""/>
             </div>
-            <div class="payment__content__cart">
-              <p>THÔNG TIN GIỎ HÀNG</p>
-              <table>
-                <tr>
-                  <th>ẢNH</th>
-                  <th>TÊN SẢN PHẨM</th>
-                  <th>GIÁ</th>
-                  <th>SỐ LƯỢNG</th>
-                  <th>TỔNG SỐ</th>
-                </tr>
-              </table>
-              <div class="payment__cart__sum"> 
-                <p>TỔNG TIỀN:</p>
+            <div class="input-text">
+              <label for="Địa chỉ">Địa chỉ
+              </label>
+              <input type="text" id="Địa chỉ" value=""/>
+            </div>
+            <div class="input-text">
+              <label for="Số điện thoại">Số điện thoại
+              </label>
+              <input type="text" id="Số điện thoại" value=""/>
+            </div>
+            <div class="input-text">
+              <label for="Email">Email
+              </label>
+              <input type="text" id="Email" value=""/>
+            </div>
+            <div class="input-checkbox">
+              <input type="checkbox" id="Đặt làm địa chỉ mặc định" value=""/>
+              <label for="Đặt làm địa chỉ mặc định">Đặt làm địa chỉ mặc định</label>
+            </div>
+            <div class="address-3__btn">
+              <div class="button-small">
+                <button id="QUAY LẠI GIỎ HÀNG">QUAY LẠI GIỎ HÀNG</button>
               </div>
-            </div>
-          </div>
-          <div class="payment__content__btn">
-            <div class="button-small">
-              <button id="QUAY LẠI THÔNG TIN">QUAY LẠI THÔNG TIN</button>
-            </div>
-            <div class="button-small">
-              <button id="HOÀN TẤT">HOÀN TẤT</button>
+              <div class="button-small">
+                <button id="TIẾP THEO">TIẾP THEO</button>
+              </div>
             </div>
           </div>
         </div>
@@ -229,6 +235,6 @@
         </div>
       </div>
     </footer>
-    <script src="./js/payment.js"></script>
+    <script src="./js/your-info.js"></script>
   </body>
 </html>

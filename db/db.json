@@ -6,7 +6,7 @@
       "title": "Rượu Chivas",
       "price": 100000,
       "oldPrice": 120000,
-      "inCart": 0
+      "inCart": 1
     },
     {
       "id": 2,
@@ -14,7 +14,7 @@
       "title": "Rượu Whisky",
       "price": 200000,
       "oldPrice": 220000,
-      "inCart": 0
+      "inCart": 1
     },
     {
       "id": 3,
@@ -22,7 +22,7 @@
       "title": "Rượu Remy Martin",
       "price": 300000,
       "oldPrice": 330000,
-      "inCart": 0
+      "inCart": 1
     },
     {
       "id": 4,
@@ -30,7 +30,7 @@
       "title": "Rượu Glenmorangie",
       "price": 400000,
       "oldPrice": 440000,
-      "inCart": 0
+      "inCart": 1
     },
     {
       "id": 5,
@@ -38,7 +38,7 @@
       "title": "Rượu Cognac",
       "price": 500000,
       "oldPrice": 550000,
-      "inCart": 0
+      "inCart": 1
     },
     {
       "id": 6,
@@ -46,7 +46,7 @@
       "title": "Rượu Vodka",
       "price": 600000,
       "oldPrice": 660000,
-      "inCart": 0
+      "inCart": 1
     },
     {
       "id": 7,
@@ -54,7 +54,7 @@
       "title": "Rượu Macallan",
       "price": 700000,
       "oldPrice": 770000,
-      "inCart": 0
+      "inCart": 1
     },
     {
       "id": 8,
@@ -62,7 +62,7 @@
       "title": "Rượu Brandy",
       "price": 800000,
       "oldPrice": 880000,
-      "inCart": 0
+      "inCart": 1
     }
   ]
 }
